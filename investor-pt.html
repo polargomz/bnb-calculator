@@ -1,0 +1,528 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="light"><meta name="theme-color" content="#173f34"><title>BnB · 투자자 모바일 PT</title><style>:root{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:#173c36;background:#f2f4ef;font-size:16px;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,select,input{font:inherit}button,a,label.file{touch-action:manipulation}button,select,.file{min-height:46px;border-radius:12px;border:1px solid #cbd8ce;background:white;padding:10px 14px;color:inherit;cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #cb7409;outline-offset:3px}button:disabled{opacity:.4;cursor:default}a{color:#236c53}p{line-height:1.6}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(1.8rem,6vw,2.7rem);letter-spacing:-.05em;line-height:1.22}h2{font-size:1.5rem;letter-spacing:-.035em}h3{font-size:1.1rem}.eyebrow{font-size:.72rem;letter-spacing:.16em;font-weight:750}.topbar{max-width:860px;margin:auto;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:850;letter-spacing:-.05em;font-size:1.25rem}.topbar small{display:block;font-size:.68rem;letter-spacing:.12em;font-weight:500;margin-top:3px}.controls{display:flex;gap:6px}.topbar button{font-size:.82rem;padding:8px 11px}.wrap{max-width:800px;margin:auto;padding:0 20px 120px}.identity{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 22px}.identity h2{font-size:1.05rem;margin:0;overflow-wrap:anywhere}.badge{background:#deebe1;color:#245b42;font-size:.73rem;padding:7px 10px;border-radius:100px;white-space:nowrap}.demo{background:#fff0cd;color:#815216}.page-label{font-size:.74rem;letter-spacing:.12em;color:#587164;margin:0 0 9px}.hero{background:#163f34;color:#f9ffec;border-radius:26px;padding:28px 24px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;border:1px solid #658d6b;border-radius:50%;width:230px;height:230px;right:-95px;top:-115px;pointer-events:none}.hero .caption{color:#b9d8c2;font-size:.9rem;margin-bottom:14px}.hero .big{display:block;font-size:clamp(3rem,12vw,5rem);line-height:1.06;font-weight:750;letter-spacing:-.065em;font-variant-numeric:tabular-nums}.unit{font-size:1rem;margin-left:8px;letter-spacing:0}.hero .annual{margin-top:18px;color:#e6efcb}.hero p:last-child{margin-bottom:0}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 24px}.stat,.card{background:#fff;border:1px solid #dde4da;border-radius:18px;padding:18px}.stat span{font-size:.8rem;color:#617568;display:block;margin-bottom:9px}.stat strong{font-size:1.45rem;letter-spacing:-.04em}.stat small{display:block;font-size:.71rem;color:#64746b;margin-top:6px}.muted{font-size:.8rem;color:#607368}.note{background:#e8eee4;border-radius:12px;padding:12px 14px;font-size:.8rem;line-height:1.65}.card{margin:12px 0}.card h3{overflow-wrap:anywhere;margin-bottom:6px}.card-head{display:flex;align-items:start;justify-content:space-between;gap:12px}.card-head .amount{white-space:nowrap;font-size:1.35rem;font-weight:750;letter-spacing:-.045em}.pill{font-size:.71rem;background:#f0f3ec;padding:4px 8px;border-radius:7px;display:inline-block;margin:3px 4px 8px 0}.metrics-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px solid #e9eee5;margin-top:12px;padding-top:12px}.metrics-row small{display:block;color:#627467;font-size:.69rem}.metrics-row strong{font-size:.95rem;display:block;margin-top:6px}.bar{height:8px;background:#e7ede3;border-radius:20px;margin-top:13px;overflow:hidden}.bar i{height:100%;display:block;background:#6f9459;border-radius:20px}.negative{color:#b34732}.negative .bar i{background:#b34732}.flow{display:grid;gap:8px}.flow-row{display:flex;justify-content:space-between;gap:15px;padding:16px 0;border-bottom:1px solid #dce5d7}.flow-row strong{white-space:nowrap}.flow-row.total{background:#163f34;color:white;padding:18px;border-radius:12px;border:0}.flow-row small{display:block;color:#607368;font-size:.74rem}.parts{display:grid;gap:10px}.part{border-left:3px solid #8caa6b;padding:8px 12px;background:#f8faf5}.part b{float:right}.part small{display:block;margin-top:5px;color:#607368}.rule-list{padding:0;list-style:none}.rule-list li{padding:15px 0;border-top:1px solid #dce3d7;line-height:1.5;font-size:.88rem}.rule-list b{display:block;margin-bottom:5px}.footnote{font-size:.72rem;color:#637369;line-height:1.6;margin-top:18px}.bottom{position:fixed;bottom:0;left:0;right:0;background:#f9fbf5f5;backdrop-filter:blur(12px);border-top:1px solid #d8e3d3;padding:10px 16px max(12px,env(safe-area-inset-bottom));z-index:5}.bottom-inner{max-width:760px;margin:auto;display:flex;gap:8px;align-items:center}.bottom button{flex:1;font-size:.78rem;padding:10px 5px;background:transparent;border:0}.bottom button[aria-current="step"]{background:#173f34;color:white}.next-row{display:flex;justify-content:space-between;align-items:center;margin:25px 0 0;gap:12px}.next-row button{min-width:98px}.primary{background:#173f34!important;color:#fff!important;border-color:#173f34!important}.page-count{font-size:.8rem;color:#617065}dialog{border:1px solid #d2dfcc;border-radius:23px;max-width:480px;width:calc(100% - 30px);padding:23px;color:#173c36;max-height:88dvh}dialog::backdrop{background:#102d2480;backdrop-filter:blur(4px)}dialog h2{margin-bottom:8px}dialog label{display:block;font-size:.85rem;margin:16px 0 7px}dialog select{width:100%}dialog .actions{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}dialog .actions button,.file{flex:1;text-align:center;font-size:.84rem}dialog label.file{margin:0;display:flex;align-items:center;justify-content:center}dialog .check{display:flex;align-items:center;gap:10px}input[type=checkbox]{width:20px;height:20px}.notice{font-size:.85rem;background:#fff0d4;padding:12px;border-radius:12px;margin:10px 0;line-height:1.5}.other-card{border:2px dashed #b17632;background:#fff8e9}.empty{text-align:center;padding:50px 12px}.export-only .settings-only{display:none!important}[hidden]{display:none!important}.summary-title{display:flex;align-items:center;gap:10px;margin-top:24px}.summary-title span{font-size:.7rem;color:#6c7c70}.subtle{border:0!important;background:transparent!important;text-decoration:underline}.print-all .pt-slide{display:block!important;break-after:page}.print-all .next-row{display:none}.card,.hero,.part{break-inside:avoid}@media(min-width:700px){.hero{padding:36px}.stats{grid-template-columns:repeat(4,1fr)}.hero .big{font-size:5rem}.wrap{padding-top:10px}}@media(max-width:360px){.wrap{padding-left:14px;padding-right:14px}.topbar{padding:14px}.metrics-row{grid-template-columns:1fr 1fr}.card-head{flex-direction:column}.topbar small{display:none}}@media print{body{background:white;color:#173c36}.topbar,.bottom,dialog,.next-row,.settings-only,#others{display:none!important}.wrap{max-width:none;padding:0}.pt-slide{display:block!important;break-after:page}.hero{background:#edf4e7!important;color:#173c36!important}.hero .caption,.hero .annual{color:#173c36}.stat,.card{box-shadow:none}.identity{margin-bottom:15px}}
+</style></head><body>
+<header class="topbar"><div class="brand">BnB.<small>INVESTOR BRIEFING</small></div><div class="controls"><button id="settings" class="settings-only">자료·공개 설정</button><button id="present" class="settings-only">PT 시작</button></div></header>
+<main class="wrap"><div id="identity" class="identity"></div><p id="notice" role="status" class="notice" hidden></p><div id="slides"></div><div id="others"></div><div class="next-row"><button id="prev">← 이전</button><span id="pageCount" class="page-count">1 / 4</span><button id="next" class="primary">다음 →</button></div></main>
+<nav class="bottom" aria-label="투자 브리핑"><div class="bottom-inner"><button data-page="0">01 한눈에</button><button data-page="1">02 숙소별</button><button data-page="2">03 정산</button><button data-page="3">04 확인사항</button></div></nav>
+<dialog id="setup" aria-labelledby="setupTitle"><h2 id="setupTitle">발표 자료 준비</h2><p class="muted">같은 브라우저의 계산기 자료를 읽거나, ‘전체 입력 저장’ JSON을 불러오세요. 다른 기기는 파일로 옮깁니다.</p><div class="actions"><button id="loadLocal">계산기 자료 읽기</button><label class="file">JSON 불러오기<input id="importFile" type="file" accept=".json,application/json" hidden></label></div><p id="dataStatus" class="note">예시 데이터</p><label for="person">발표할 투자자</label><select id="person"></select><label class="check"><input id="hideOthers" type="checkbox" checked>다른 투자자 내역 숨기기</label><p class="muted">해제하면 발표자 화면 아래에 다른 사람의 요약을 표시합니다. PT 시작 시 다시 숨깁니다. 화면 숨김은 로그인·접근 제한 기능이 아닙니다.</p><div class="actions"><button id="apply" class="primary">선택 완료</button><button id="share">이 사람만 공유용 HTML 저장</button></div><p class="muted">공유 파일은 선택한 사람의 결과만 담습니다. 상대방에게는 이 파일을 전달하세요. 공개 주소 자체에는 개인 입력이 저장되지 않습니다.</p><div class="actions"><button id="demo" class="subtle">예시로 보기</button><a href="multi-site.html" target="_blank" rel="noopener">계산기 열기 ↗</a></div></dialog>
+
+<script>const BASE_INPUTS={"version": 6, "people": [{"name": "투자자 1", "repair": 2000, "deposit": 8000, "working": 300, "leasePremium": 0, "subleasePremium": 0, "loanPrincipal": 0, "loanRate": 6, "otherFinancial": 0, "share": 0, "type": "active", "rent": 60, "other": 0, "ded": 150, "expense": 0}, {"name": "투자자 2", "repair": 0, "deposit": 4000, "working": 0, "leasePremium": 0, "subleasePremium": 0, "loanPrincipal": 0, "loanRate": 6, "otherFinancial": 0, "share": 0, "type": "passive", "rent": 30, "other": 0, "ded": 150, "expense": 0}], "host": {"other": 0, "ded": 150, "expense": 0, "withholding": 0}, "controls": {"contractMode": "custom", "adr": "12.5", "days": "365", "occupancy": "75", "occRange": "75", "structure": "joint", "priceBasis": "gross", "feeBasis": "gross", "count": "2", "leaseType": "jeonse", "rent": "0", "hostPerson": "-1", "landlordName": "건물주", "tenantPerson": "all", "p0_name": "투자자 1", "p0_repair": "2000", "p0_deposit": "8000", "p0_working": "300", "p0_leasePremium": "0", "p0_subleasePremium": "0", "p0_share": "66.6667", "p0_type": "active", "p0_loanPrincipal": "0", "p0_loanRate": "6", "p0_otherFinancial": "0", "p0_rent": "60", "p1_name": "투자자 2", "p1_repair": "0", "p1_deposit": "4000", "p1_working": "0", "p1_leasePremium": "0", "p1_subleasePremium": "0", "p1_share": "33.3333", "p1_type": "passive", "p1_loanPrincipal": "0", "p1_loanRate": "6", "p1_otherFinancial": "0", "p1_rent": "30", "leasePremiumSeller": "", "leasePremiumDate": "", "leasePremiumEnd": "", "leasePremiumStatus": "검토 중", "leasePremiumMemo": "", "leaseRecovery": "0", "subleasePremiumSeller": "", "subleasePremiumDate": "", "subleasePremiumEnd": "", "subleasePremiumStatus": "검토 중", "subleasePremiumMemo": "", "subleaseRecovery": "0", "premiumMonths": "60", "autoShares": true, "frequencyMode": "stay", "frequencyValue": "3", "clean": "5", "laundry": "1.5", "amenity": "0.8", "managerA": "1", "managerB": "3", "managerMode": "A", "utilities": "20", "telecom": "4", "insurance": "2", "subscription": "5", "fixedOther": "0", "platform": "15.5", "hostRate": "10", "repair": "5", "other": "0", "reserve": "10", "amortMonths": "60", "vatMode": "auto", "priorMode": "forecast", "priorGross": "0", "vatExcluded": false, "platformVat": "foreign-none", "purchaseVat": "0", "eligiblePurchases": "0", "taxDep": "0", "taxAdjust": "0", "h_other": "0", "h_ded": "150", "h_expense": "0", "h_withholding": "0", "t0_other": "0", "t0_ded": "150", "t0_expense": "0", "t1_other": "0", "t1_ded": "150", "t1_expense": "0", "comparisonRent": "90", "comparisonLoanRate": "6"}};
+/* PURE CALCULATION START — all money in KRW 10,000 */
+function incomeTax(x){x=Math.max(0,x);const brackets=[[1400,.06,0],[5000,.15,126],[8800,.24,576],[15000,.35,1544],[30000,.38,1994],[50000,.40,2594],[100000,.42,3594],[Infinity,.45,6594]];const b=brackets.find(b=>x<=b[0]);return Math.max(0,x*b[1]-b[2]);}
+function personTax(cash,taxable,type,person,withholdRate=0){const other=Math.max(0,person.other||0),ded=Math.max(0,person.ded||0),positive=Math.max(0,taxable),base=incomeTax(other-ded);let full=incomeTax(other+positive-ded);if(type==='passive')full=Math.max(full,base+positive*.14);const national=Math.max(0,full-base),local=national*.1,withheld=type==='passive'?positive*.275:Math.max(0,cash)*withholdRate;return{cash,taxable,national,local,total:national+local,withheld,balance:national+local-withheld,after:(cash-national-local)/12,atPayment:(cash-withheld)/12};}
+function premiumPaid(p,sublease){return (p.leasePremium||0)+(sublease?(p.subleasePremium||0):0);}
+function tenantEligible(s,i){return i!==s.hostIndex&&(s.tenantPerson===undefined||s.tenantPerson==='all'||String(i)===String(s.tenantPerson));}
+function subleaseEnabled(s){return s.contractMode==='mixed'||s.structure==='rental';}
+function partyCapital(p,sublease){return p.type==='loan'?(p.loanPrincipal||0):p.repair+p.deposit+p.working+premiumPaid(p,sublease);}
+function loanTax(cash,p){const interest=Math.max(0,cash),other=Math.max(0,p.other||0),ded=Math.max(0,p.ded||0),finance=Math.max(0,p.otherFinancial||0);
+ const total=i=>{const f=finance+i,base=incomeTax(other-ded);return f<=2000?base+finance*.14+i*.25:Math.max(incomeTax(other+f-2000-ded)+2000*.14,base+finance*.14+i*.25);};
+ const national=Math.max(0,total(interest)-total(0)),local=national*.1,withheld=interest*.275;return{cash,taxable:interest,national,local,total:national+local,withheld,balance:national+local-withheld,after:(cash-national-local)/12,atPayment:(cash-withheld)/12};}
+function investorReturn(p,joint){
+ if(p.role==='externalHost')return null;
+ const capital=partyCapital(p.person,p.subleaseApplied===undefined?!joint:p.subleaseApplied),rate=x=>capital>0?x/capital*100:null;
+ const payback=annual=>capital>0&&annual>0?capital/annual:null;
+ const summarize=(label,cash,tax)=>({label,cash,tax,after:cash-tax,preRoi:rate(cash),postRoi:rate(cash-tax),prePayback:payback(cash),postPayback:payback(cash-tax)});
+ const total=summarize(p.role==='investorHost'&&joint?'운영 보수 포함 · 수령 소계':'수령 소계',p.cash,p.tax.total);
+ let parts,shareOnly=null;
+ if(p.role==='investorHost'&&joint){
+  const taxablePriority=Math.max(0,p.priorityTaxable||0),taxableShare=Math.max(0,p.taxable-taxablePriority),weight=taxablePriority+taxableShare;
+  const priorityTax=weight>0?p.tax.total*taxablePriority/weight:0;
+  shareOnly=summarize('투자 지분 배분금만',p.shareCash,p.tax.total-priorityTax);
+  parts=[summarize('호스트 운영 보수 · 내부 우선배분',p.priority,priorityTax),shareOnly];
+ }else if(p.role==='investorHost'){
+  parts=[summarize('단독사업 잔여 손익 · 운영·투자 구분 없음',p.cash,p.tax.total)];
+ }else{
+  shareOnly=joint&&!['rental','loan'].includes(p.type)?summarize('투자 지분 배분금',p.cash,p.tax.total):null;
+  parts=[shareOnly||summarize(p.type==='loan'?'대여금 이자 · 원금 상환 제외':'전대 순수입 · 건물주 임대료 차감 후',p.cash,p.tax.total)];
+ }
+ return{capital,total,parts,shareOnly,separable:joint};
+}
+function feeVat(amount,mode){
+ const domestic=mode==='domestic-extra'||mode==='domestic-included';
+ const extra=mode==='domestic-extra'||mode==='foreign-extra';
+ const included=mode==='domestic-included'||mode==='foreign-included';
+ const vat=extra?amount*.1:included?amount/11:0;
+ const cash=amount+(extra?vat:0),base=cash-vat;
+ return{cash,base,vat,credit:domestic?vat:0,eligible:domestic?cash:0};
+}
+function calculateVat(s,grossAnnual,fee){
+ const previous=s.portfolioVat?s.portfolioVat.previous:(s.priorMode==='manual'?Math.max(0,s.priorGross||0):grossAnnual);
+ const mode=s.portfolioVat?s.portfolioVat.mode:(s.vatExcluded?'general':s.vatMode==='general'?'general':s.vatMode==='simple'?'simple':Math.round(previous*10000)<104000000?'simple':'general');
+ // Round to KRW before strict threshold comparisons to avoid floating point drift.
+ const exempt=mode==='simple'&&Math.round(grossAnnual*10000)<48000000;
+ const eligible=Math.max(0,s.eligiblePurchases||0)+fee.eligible*12;
+ const input=Math.max(0,s.eligiblePurchases||0)/11+fee.credit*12;
+ const output=mode==='general'?grossAnnual/11:grossAnnual*.25*.1;
+ const rawCredit=mode==='general'?input:eligible*.005;
+ const credit=mode==='general'?rawCredit:exempt?0:Math.min(output,rawCredit);
+ const net=exempt?0:output-credit;
+ return{mode,previous,exempt,gross:grossAnnual,eligible,input,output,rawCredit,credit,net,payable:Math.max(0,net),refund:Math.max(0,-net)};
+}
+// Sold-night shares allocate one site's inventory; listing on more channels never adds nights.
+function validateGuestCharges(items){
+ if(items===undefined)return [];
+ if(!Array.isArray(items)||items.length>20)throw Error('채널 추가요금은 최대 20개입니다.');
+ const ids=new Set();
+ for(const x of items){
+  if(!x||typeof x.id!=='string'||!/^[A-Za-z0-9_-]{1,100}$/.test(x.id)||ids.has(x.id))throw Error('추가요금 ID를 확인하세요.');ids.add(x.id);
+  if(typeof x.name!=='string'||!x.name.trim()||x.name.length>60)throw Error('추가요금 항목명을 입력하세요.');
+  if(typeof x.amount!=='number'||!Number.isFinite(x.amount)||x.amount<0)throw Error('추가요금은 0 이상의 숫자입니다.');
+  if(!['night','stay'].includes(x.basis)||typeof x.commissionable!=='boolean')throw Error('추가요금 부과 기준과 수수료 대상을 확인하세요.');
+ }
+ return items;
+}
+function validateChannels(rows,requireComplete=true){
+ if(!Array.isArray(rows)||(requireComplete&&!rows.length)||rows.length>20)throw Error('채널은 1~20개로 입력하세요.');
+ let sum=0;const ids=new Set();
+ for(const c of rows){if(typeof c.id!=='string'||!/^[A-Za-z0-9_-]{1,100}$/.test(c.id)||ids.has(c.id))throw Error('채널 ID를 확인하세요.');ids.add(c.id);
+ if(typeof c.name!=='string'||(requireComplete&&!c.name.trim())||c.name.length>60)throw Error('채널 이름을 입력하세요.');
+ for(const k of ['share','fee','stay'])if(typeof c[k]!=='number'||!Number.isFinite(c[k])||c[k]<0)throw Error('채널 비중·수수료·숙박일수를 확인하세요.');
+ if(c.adr!==undefined&&(typeof c.adr!=='number'||!Number.isFinite(c.adr)||c.adr<0))throw Error('채널 1박 단가는 0 이상의 숫자입니다.');
+ if(c.taxType!==undefined&&!['lodging','housing','rental','review'].includes(c.taxType))throw Error('채널 거래 유형을 확인하세요.');
+ for(const [key,values] of Object.entries({bookingRoute:['platform','direct'],directPayment:['cash','card','mixed'],directCustomer:['consumer','business']}))if(c[key]!==undefined&&!values.includes(c[key]))throw Error('직접 예약의 경로·결제수단·고객 유형을 확인하세요.');
+ validateGuestCharges(c.guestCharges);
+ if(c.share>100||c.fee>100||c.stay<=0)throw Error('비중·수수료는 0~100%, 숙박일수는 0보다 커야 합니다.');
+ if(!['foreign-none','foreign-extra','foreign-included','domestic-extra','domestic-included'].includes(c.vat))throw Error('채널 수수료 증빙을 선택하세요.');sum+=c.share;
+ }if(requireComplete&&Math.abs(sum-100)>1e-6)throw Error('채널별 판매박수 비중 합계를 100%로 맞추세요.');return rows;
+}
+function channelMetrics(rows,nights,revenue,feeBasis,priceBasis='gross'){
+ validateChannels(rows);const fee={cash:0,base:0,vat:0,credit:0,eligible:0};let visits=0;
+ const detail=rows.map(c=>{
+  const type=c.taxType||'lodging',taxable=type!=='housing',n=nights*c.share/100,v=n/c.stay,multiplier=priceBasis==='net'&&taxable?1.1:1;
+  const roomRevenue=c.adr===undefined?revenue*c.share/100/(priceBasis==='net'&&!taxable?1.1:1):n*c.adr*multiplier;
+  const chargeDetails=(c.guestCharges||[]).map(x=>({...x,quantity:x.basis==='night'?n:v,revenue:(x.basis==='night'?n:v)*x.amount*multiplier}));
+  const extraRevenue=chargeDetails.reduce((a,x)=>a+x.revenue,0),gross=roomRevenue+extraRevenue,supply=taxable?gross/1.1:gross;
+  const commissionGross=roomRevenue+chargeDetails.reduce((a,x)=>a+(x.commissionable?x.revenue:0),0),commissionBase=feeBasis==='net'&&taxable?commissionGross/1.1:commissionGross;
+  const f=feeVat(commissionBase*c.fee/100,c.vat);visits+=v;for(const k of Object.keys(fee))fee[k]+=f[k];
+  return{...c,taxType:type,taxable,supply,nights:n,roomRevenue,extraRevenue,chargeDetails,commissionBase,revenue:gross,visits:v,feeDetail:f};
+ });
+ return{rows:detail,roomRevenue:detail.reduce((a,c)=>a+c.roomRevenue,0),extraRevenue:detail.reduce((a,c)=>a+c.extraRevenue,0),supply:detail.reduce((a,c)=>a+c.supply,0),taxableGross:detail.reduce((a,c)=>a+(c.taxable?c.revenue:0),0),revenue:detail.reduce((a,c)=>a+c.revenue,0),fee,visits,averageStay:visits>0?nights/visits:null};
+}
+
+function channelProfitComparison(s,r){
+ const nights=s.days*s.occupancy/100/12,plan=channelMetrics(s.channelMix,nights,nights*s.adr*(s.priceBasis==='net'?1.1:1),s.feeBasis,s.priceBasis);
+ const common=r.expense-r.platform-r.operating;
+ const rows=plan.rows.map(c=>{
+  const weight=plan.revenue>0?c.revenue/plan.revenue:nights>0?c.nights/nights:c.share/100;
+  const clean=c.visits*s.clean,laundry=c.visits*s.laundry,feeRevenue=s.feeBasis==='net'?c.supply:c.revenue;
+  const otherDirect=c.visits*s.amenity+(s.managerMode!=='B'?c.visits*s.managerA:0)+(s.managerMode!=='A'?feeRevenue*s.managerB/100:0);
+  const shared=common*weight,vat=r.vat.channels?r.vat.channels.find(v=>v.id===c.id).net/12:r.vat.net/12*weight,platform=c.feeDetail.cash;
+  return{...c,clean,laundry,otherDirect,shared,vat,platform,profit:c.revenue-platform-clean-laundry-otherDirect-shared-vat};
+ });
+ const total={};for(const k of ['nights','roomRevenue','extraRevenue','revenue','platform','clean','laundry','otherDirect','shared','vat','profit'])total[k]=rows.reduce((sum,c)=>sum+c[k],0);
+ return{rows,total};
+}
+
+// Currency is KRW 10,000. Annual projection assumes the same monthly mix in each half-year.
+const transactionTypes={lodging:'과세 숙박',housing:'면세 주택임대',rental:'과세 부동산임대',review:'확인 필요 · 계산 보류'};
+const costVatDefs=[['clean','청소'],['laundry','세탁'],['amenity','어메니티'],['manager','관리인'],['rent','임대료'],['utilities','광열비'],['telecom','통신비'],['insurance','보험료'],['subscription','서비스 사용료'],['fixedOther','기타 고정비'],['hostFee','외부 호스트 보수'],['rents','전대 사용료'],['repair','수선비'],['other','기타 비용'],['legacy','기존 일괄 부가세']];
+function defaultCostVat(site){
+ const c=site.data.controls;
+ return Object.fromEntries(costVatDefs.map(([k])=>[k,{scope:'common',paid:k==='legacy'?Number(c.purchaseVat)||0:0,qualified:k==='legacy'?(Number(c.eligiblePurchases)||0)/132:0}]));
+}
+function validateCostVat(config){
+ if(!config||typeof config!=='object'||Array.isArray(config))throw Error('비용 부가세 입력을 확인하세요.');
+ for(const [k,x] of Object.entries(config)){
+  if(!costVatDefs.some(([id])=>id===k)||!x||!['taxable','exempt','common'].includes(x.scope))throw Error('비용 귀속을 선택하세요.');
+  if(['paid','qualified'].some(f=>typeof x[f]!=='number'||!Number.isFinite(x[f])||x[f]<0)||x.qualified>x.paid+1e-8)throw Error('적격 증빙 부가세는 지급 부가세 이내로 입력하세요.');
+ }
+ return config;
+}
+function costVatPaid(config){validateCostVat(config);return Object.values(config).reduce((a,x)=>a+x.paid,0);}
+function calculateMixedVat(s,grossAnnual,fee,plan,amounts){
+ if(!plan){const nights=s.days*s.occupancy/100/12;plan=channelMetrics([{id:'single',name:'단일 채널',share:100,fee:s.platform,stay:1,vat:s.platformVat||'foreign-none'}],nights,grossAnnual/12,s.feeBasis,s.priceBasis);}
+ if(plan.rows.some(c=>c.taxType==='review'&&c.share>0))throw Error('확인 필요 채널의 거래 유형을 확정하세요. 해당 숙소 계산을 보류합니다.');
+ const taxableGross=plan.taxableGross*12,housingGross=grossAnnual-taxableGross,taxableSupply=taxableGross/1.1,totalSupply=taxableSupply+housingGross;
+ const previous=s.portfolioVat?s.portfolioVat.previous:(s.priorMode==='manual'?Math.max(0,s.priorGross||0):taxableGross);
+ const mode=s.portfolioVat?s.portfolioVat.mode:s.vatExcluded?'general':s.vatMode==='auto'?(Math.round(previous*10000)<104000000?'simple':'general'):s.vatMode;
+ const taxableConfigured=plan.rows.some(c=>c.taxable&&c.share>0),housingOnly=!taxableConfigured;
+ const exempt=mode==='simple'&&Math.round(taxableGross*10000)<48000000;
+ const config=s.costVat||Object.fromEntries(costVatDefs.map(([k])=>[k,{scope:'common',paid:k==='legacy'?Math.max(0,s.purchaseVat||0):0,qualified:k==='legacy'?Math.max(0,s.eligiblePurchases||0)/132:0}]));
+ validateCostVat(config);
+ const expenseRows=Object.entries(config).map(([key,x])=>({key,...x,base:amounts[key]||0}));
+ const baseTotal=Object.values(amounts).reduce((a,x)=>a+x,0);
+ let qualifiedBase=0;
+ for(const x of expenseRows){
+  if(x.key!=='legacy'&&x.paid>x.base*.1+1e-7)throw Error((costVatDefs.find(([k])=>k===x.key)?.[1]||x.key)+' 지급 부가세가 비용의 10%를 넘습니다. 비용은 부가세 제외로 입력하세요.');
+  qualifiedBase+=x.qualified*10;
+  if(housingOnly&&x.scope==='taxable'&&x.qualified>0)throw Error('면세 전용 숙소에는 과세 전용 매입 공제를 입력할 수 없습니다.');
+ }
+ if(qualifiedBase>baseTotal+1e-7)throw Error('적격 증빙 매입액이 기존 비용을 넘습니다. 기존 일괄 부가세와 중복 입력하지 마세요.');
+ const commonAnnual=expenseRows.filter(x=>x.scope==='common').reduce((a,x)=>a+x.qualified*12,0);
+ const ratio=totalSupply>0?taxableSupply/totalSupply:0,exemptRatio=1-ratio;
+ // General-taxpayer half-year thresholds: common VAT < KRW50k, or exempt share <5% and common VAT < KRW5m.
+ const periodCommon=commonAnnual/(mode==='general'?2:1);
+ const smallCommon=mode==='general'&&taxableSupply>0&&housingGross>0&&(Math.round(periodCommon*10000)<50000||(exemptRatio<.05&&Math.round(periodCommon*10000)<5000000));
+ const commonRatio=smallCommon?1:ratio;
+ expenseRows.forEach(x=>{x.ratio=x.scope==='taxable'?1:x.scope==='exempt'?0:commonRatio;x.allowed=x.qualified*12*x.ratio;});
+ const feeAllowed=plan.rows.reduce((a,c)=>a+(c.taxable?c.feeDetail.credit*12:0),0);
+ const input=expenseRows.reduce((a,x)=>a+x.allowed,0)+feeAllowed;
+ const eligible=expenseRows.reduce((a,x)=>a+x.allowed*11,0)+plan.rows.reduce((a,c)=>a+(c.taxable?c.feeDetail.eligible*12:0),0);
+ const channels=plan.rows.map(c=>({...c,output:c.taxable?(mode==='general'?c.revenue*12/11:c.revenue*12*(c.taxType==='rental'?.4:.25)*.1):0}));
+ const output=channels.reduce((a,c)=>a+c.output,0),rawCredit=mode==='general'?input:eligible*.005,credit=mode==='general'?rawCredit:exempt?0:Math.min(output,rawCredit),net=exempt?0:output-credit;
+ const paid=expenseRows.reduce((a,x)=>a+x.paid*12,0)+fee.vat*12,qualified=expenseRows.reduce((a,x)=>a+x.qualified*12,0)+fee.credit*12;
+ // Channel net VAT is a management allocation. Site VAT is the statutory projection.
+ const allowedCosts=expenseRows.reduce((a,x)=>a+x.allowed,0),taxableShares=plan.rows.filter(c=>c.taxable).reduce((a,c)=>a+c.share,0);
+ channels.forEach(c=>{const weight=c.taxable?(taxableSupply>0?c.supply*12/taxableSupply:taxableShares>0?c.share/taxableShares:0):0;
+  const raw=mode==='general'?(c.taxable?c.feeDetail.credit*12:0)+allowedCosts*weight:((c.taxable?c.feeDetail.eligible*12:0)+expenseRows.reduce((a,x)=>a+x.allowed*11,0)*weight)*.005;
+  c.credit=rawCredit>0?raw*credit/rawCredit:0;c.net=exempt?0:c.output-c.credit;
+ });
+ return{mode,previous,exempt,housingOnly,gross:grossAnnual,taxableGross,housingGross,taxableSupply,totalSupply,ratio,commonRatio,smallCommon,eligible,input,output,rawCredit,credit,net,payable:Math.max(0,net),refund:Math.max(0,-net),paid,qualified,disallowed:paid-input,expenseRows,channels};
+}
+
+function calculateLegacy(s){
+const hostIndex=Number.isInteger(s.hostIndex)&&s.hostIndex>=0&&s.hostIndex<s.people.length?s.hostIndex:-1,internal=hostIndex>=0,joint=s.structure==='joint';
+const capital=s.people.reduce((a,p)=>({repair:a.repair+p.repair,deposit:a.deposit+p.deposit,working:a.working+p.working,leasePremium:a.leasePremium+(p.leasePremium||0),subleasePremium:a.subleasePremium+(!joint?(p.subleasePremium||0):0)}),{repair:0,deposit:0,working:0,leasePremium:0,subleasePremium:0});capital.premium=capital.leasePremium+capital.subleasePremium;capital.total=capital.repair+capital.deposit+capital.working+capital.premium;
+const shares=s.people.map(p=>s.auto?(capital.deposit>0?p.deposit/capital.deposit:0):p.share/100),shareSum=shares.reduce((a,b)=>a+b,0),validShares=Math.abs(shareSum-1)<.000001;
+const nights=s.days*s.occupancy/100/12,channelPlan=s.channelMix?channelMetrics(s.channelMix,nights,nights*s.adr*(s.priceBasis==='net'?1.1:1),s.feeBasis,s.priceBasis):null,revenue=channelPlan?channelPlan.revenue:nights*s.adr*(s.priceBasis==='net'?1.1:1),feeRevenue=s.feeBasis==='net'?(channelPlan?channelPlan.supply:revenue/1.1):revenue;
+const visits=channelPlan?channelPlan.visits:s.frequencyMode==='stay'?nights/s.frequencyValue:s.frequencyValue,clean=visits*s.clean,laundry=visits*s.laundry,amenity=visits*s.amenity,manager=(s.managerMode!=='B'?visits*s.managerA:0)+(s.managerMode!=='A'?feeRevenue*s.managerB/100:0),operating=clean+laundry+amenity+manager,leaseType=s.leaseType||(s.fixed[0]>0?'monthly':'jeonse'),fixedAmounts=s.fixed.map((v,i)=>i===0&&leaseType==='jeonse'?0:v),monthlyRent=fixedAmounts[0],tenantRent=!joint&&s.tenantPerson!==undefined?monthlyRent:0; if(tenantRent)fixedAmounts[0]=0;const fixed=fixedAmounts.reduce((a,b)=>a+b,0),eligibleTenants=s.people.map((p,i)=>tenantEligible(s,i)),tenantCount=eligibleTenants.filter(Boolean).length,tenantDeposits=s.people.reduce((a,p,i)=>a+(eligibleTenants[i]?p.deposit:0),0),tenantRentShares=s.people.map((p,i)=>eligibleTenants[i]?tenantRent*(tenantDeposits>0?p.deposit/tenantDeposits:1/Math.max(1,tenantCount)):0);
+const platformDetail=channelPlan?channelPlan.fee:feeVat(feeRevenue*s.platform/100,s.platformVat||'foreign-none'),platform=platformDetail.cash,hostTarget=joint?feeRevenue*s.hostRate/100:0,hostFee=joint&&!internal?hostTarget:0,rents=!joint?s.people.reduce((a,p,i)=>a+(tenantEligible(s,i)?p.rent:0),0):0,other=s.repair+s.other,purchaseVat=s.costVat?costVatPaid(s.costVat):Math.max(0,s.purchaseVat||0),expense=operating+fixed+platform+hostFee+rents+other+purchaseVat;
+const vat=(channelPlan||s.costVat?calculateMixedVat(s,revenue*12,platformDetail,channelPlan,{clean,laundry,amenity,manager,rent:fixedAmounts[0],utilities:fixedAmounts[1],telecom:fixedAmounts[2],insurance:fixedAmounts[3],subscription:fixedAmounts[4],fixedOther:fixedAmounts[5],hostFee,rents:s.__vatRents??rents,repair:s.repair,other:s.other-(s.__vatNonPurchase||0)-(s.__vatRents||0)}):calculateVat(s,revenue*12,platformDetail)),beforeVatProfit=revenue-expense,profit=beforeVatProfit-vat.net/12,distributable=profit-s.reserve,premiumAmort=capital.premium/(s.premiumMonths||60),amort=capital.repair/s.amortMonths+premiumAmort,economic=(joint?profit:rents-tenantRent+(internal?profit:0))-amort,taxIncome=profit*12-s.taxDep+s.taxAdjust;
+// Internal host compensation is an agreed priority profit allocation, not a deductible fee.
+// Apply the same priority rule separately to annual cash and annual taxable profit.
+const hostPriority=joint&&internal?Math.min(hostTarget,Math.max(0,distributable)):0,taxPriority=joint&&internal?Math.min(hostTarget*12,Math.max(0,taxIncome)):0,residual=distributable-hostPriority;
+let payouts=[];
+if(joint){
+ if(!internal)payouts.push({name:'호스트',kind:'외부 운영 용역',type:'service',role:'externalHost',cash:hostFee*12,taxable:hostFee*12-s.host.expense,person:s.host,withholdRate:s.host.withholding});
+ if(validShares)s.people.forEach((p,i)=>{const isHost=i===hostIndex;payouts.push({name:p.name,kind:isHost?'투자자 겸 호스트 · 일반 공동사업자':p.type==='passive'?'출자공동사업자':'일반 공동사업자',type:isHost?'active':p.type,role:isHost?'investorHost':'investor',priority:isHost?hostPriority*12:0,priorityTaxable:isHost?taxPriority:0,shareCash:residual*12*shares[i],cash:residual*12*shares[i]+(isHost?hostPriority*12:0),taxable:(taxIncome-taxPriority)*shares[i]+(isHost?taxPriority:0),person:p,withholdRate:0});});
+}else{
+ const hp=internal?s.people[hostIndex]:s.host;
+ payouts.push({name:internal?hp.name:'호스트',kind:internal?'투자자 겸 호스트 · 단독 숙박사업자':'단독 숙박사업자',type:'active',role:internal?'investorHost':'externalHost',cash:distributable*12,taxable:taxIncome,person:hp,withholdRate:0});
+ s.people.forEach((p,i)=>{if(i!==hostIndex){const rent=eligibleTenants[i]?p.rent:0,paid=tenantRentShares[i];payouts.push({name:p.name,kind:eligibleTenants[i]?'원임차인 · 전대인':'자금 투자자 · 별도 배분 미설정',type:'rental',role:'investor',grossRent:rent*12,landlordRent:paid*12,cash:(rent-paid)*12,taxable:(rent-paid)*12-p.expense,person:p,withholdRate:0});}});
+}
+payouts=payouts.map(p=>{const q={...p,tax:personTax(p.cash,p.taxable,p.type,p.person,p.withholdRate)};return{...q,investmentReturn:investorReturn(q,joint)};});return{tenantRent,tenantRentShares,eligibleTenants,premiumAmort,leaseType,monthlyRent,fixedAmounts,vat,platformDetail,purchaseVat,feeRevenue,beforeVatProfit,hostIndex,internal,hostTarget,hostPriority,taxPriority,residual,capital,shares,shareSum,validShares,nights,revenue,visits,clean,laundry,amenity,manager,operating,fixed,platform,hostFee,rents,other,expense,profit,distributable,amort,economic,taxIncome,payouts,roi:capital.total?economic*12/capital.total*100:null};}
+
+function calculate(s){
+ if(!['loan','mixed'].includes(s.contractMode))return {...calculateLegacy(s),loanInterest:0};
+ const loan=s.contractMode==='loan',hi=s.hostIndex,internal=hi>=0,sub=!loan;
+ const lenders=s.people.map((p,i)=>loan&&i!==hi),landlords=s.people.map((p,i)=>!loan&&i!==hi&&p.type==='rental'),members=s.people.map((p,i)=>!loan&&!landlords[i]);
+ const deposits=s.people.reduce((a,p,i)=>a+(members[i]?p.deposit:0),0),weights=s.people.map((p,i)=>members[i]?(s.auto?(deposits>0?p.deposit/deposits:0):p.share/100):0),shareSum=weights.reduce((a,b)=>a+b,0);
+ const rentSum=s.people.reduce((a,p,i)=>a+(landlords[i]?p.rent:0),0),interest=s.people.reduce((a,p,i)=>a+(lenders[i]?(p.loanPrincipal||0)*(p.loanRate||0)/100/12:0),0);
+ const landlordRent=sub&&s.leaseType!=='jeonse'?s.fixed[0]:0,landlordDeposits=s.people.reduce((a,p,i)=>a+(landlords[i]?p.deposit:0),0),landlordCount=landlords.filter(Boolean).length;
+ const landlordCosts=s.people.map((p,i)=>landlords[i]?landlordRent*(landlordDeposits>0?p.deposit/landlordDeposits:1/Math.max(1,landlordCount)):0);
+ const normalized=s.people.map((p,i)=>({...p,type:'active',share:weights[i]*100,rent:0,...(lenders[i]?{repair:0,deposit:0,working:0,leasePremium:0,subleasePremium:0}: {})}));
+ const b={...s,people:normalized,auto:false,structure:loan?'rental':'joint',tenantPerson:undefined,fixed:s.fixed.map((v,i)=>sub&&i===0?0:v),other:s.other+rentSum+interest};
+ b.__vatNonPurchase=interest;b.__vatRents=rentSum;const r=calculateLegacy(b);
+ const cap={repair:0,deposit:0,working:0,leasePremium:0,subleasePremium:0,loanPrincipal:0};s.people.forEach((p,i)=>{if(lenders[i])cap.loanPrincipal+=p.loanPrincipal||0;else{for(const k of ['repair','deposit','working','leasePremium'])cap[k]+=p[k]||0;cap.subleasePremium+=sub?(p.subleasePremium||0):0;}});cap.premium=cap.leasePremium+cap.subleasePremium;cap.total=cap.repair+cap.deposit+cap.working+cap.premium+cap.loanPrincipal;
+ let payouts=r.payouts.filter(p=>{const i=normalized.indexOf(p.person);return (i<0||loan)?(p.role==='externalHost'||p.role==='investorHost'):!landlords[i];}).map(p=>{const i=normalized.indexOf(p.person);return{...p,person:i>=0?s.people[i]:s.host};});
+ s.people.forEach((p,i)=>{if(lenders[i]){const cash=(p.loanPrincipal||0)*(p.loanRate||0)/100;payouts.push({name:p.name,kind:'금전소비대차 · 개인 대여자',type:'loan',role:'investor',cash,taxable:cash,person:p});}if(landlords[i])payouts.push({name:p.name,kind:'원임차인 · 전대인',type:'rental',role:'investor',grossRent:p.rent*12,landlordRent:landlordCosts[i]*12,cash:(p.rent-landlordCosts[i])*12,taxable:(p.rent-landlordCosts[i])*12-p.expense,person:p});});
+ payouts=payouts.map(p=>{const q={...p,subleaseApplied:sub,tax:p.type==='loan'?loanTax(p.cash,p.person):personTax(p.cash,p.taxable,p.type,p.person,p.withholdRate||0)};if(p.type==='active'&&p.role==='investor'&&p.person.type==='passive'){q.type='passive';q.kind='출자공동사업자';q.tax=personTax(p.cash,p.taxable,'passive',p.person);}return{...q,investmentReturn:investorReturn(q,!loan)};});
+ const amort=cap.repair/s.amortMonths+cap.premium/(s.premiumMonths||60),investorCash=payouts.filter(p=>p.investmentReturn).reduce((a,p)=>a+p.cash/12,0),economic=investorCash+(!loan||internal?s.reserve:0)-amort;
+ return{...r,capital:cap,payouts,other:s.repair+s.other,rents:rentSum,loanInterest:interest,tenantRent:landlordRent,tenantRentShares:landlordCosts,monthlyRent:s.leaseType==='jeonse'?0:s.fixed[0],eligibleTenants:landlords,shares:weights,shareSum:loan?1:shareSum,validShares:loan||Math.abs(shareSum-1)<1e-6,amort,premiumAmort:cap.premium/(s.premiumMonths||60),economic,roi:cap.total?economic*12/cap.total*100:null};
+}
+
+// Compare contract mechanics without mutating the selected settlement or its funding.
+function compareContractTypes(source,options={}){
+ const modes=['owner_service','active_joint','passive_joint','sublease','loan','mixed'];
+ const hi=source.hostIndex>=0?source.hostIndex:0;
+ const common=source.people.map((p,i)=>{
+  const lender=source.contractMode==='loan'&&i!==source.hostIndex;
+  return {...p,type:'active',...(lender?{deposit:p.loanPrincipal||0,repair:0,working:0,leasePremium:0,subleasePremium:0}:{leasePremium:premiumPaid(p,subleaseEnabled(source)),subleasePremium:0})};
+ });
+ const funds=common.map(p=>partyCapital(p,false)),capital=funds.reduce((a,b)=>a+b,0);
+ const rent=options.rent===undefined?90:options.rent,rate=options.rate===undefined?6:options.rate;
+ return modes.map(mode=>{
+  const row={mode,capital,hostIndex:mode==='owner_service'?-1:hi};
+  if(!Number.isFinite(rent)||rent<0||!Number.isFinite(rate)||rate<0)return {...row,error:'비교용 전대료와 이율을 확인하세요.'};
+  if(mode!=='owner_service'&&common.length<2)return {...row,error:'호스트와 별도 투자자 등 2명 이상이 필요합니다.'};
+  if(mode==='mixed'&&common.length<3)return {...row,error:'호스트·전대인·다른 공동사업자 등 3명 이상이 필요합니다.'};
+  const s={...source,contractMode:mode,hostIndex:row.hostIndex,host:{...source.host},fixed:[...source.fixed],people:common.map(p=>({...p})),auto:false,structure:mode==='sublease'?'rental':mode==='loan'?'loan':'joint'};
+  const others=s.people.map((p,i)=>i).filter(i=>i!==hi);
+  const selected=Number(source.tenantPerson),landlord=others.includes(selected)?selected:others[0];
+  s.tenantPerson=mode==='loan'?'host':mode==='sublease'?'all':mode==='mixed'?String(landlord):'0';
+  const weights=s.people.map((p,i)=>mode==='mixed'&&i===landlord?0:source.auto?p.deposit:p.share);
+  const weightTotal=weights.reduce((a,b)=>a+b,0);
+  if(s.structure==='joint'&&weightTotal<=0)return {...row,error:'공동사업자의 보증금 또는 수기 지분이 필요합니다.'};
+  const rentalIds=mode==='sublease'?others:mode==='mixed'?[landlord]:[];
+  const rentalFunds=rentalIds.reduce((a,i)=>a+funds[i],0);
+  s.people.forEach((p,i)=>{
+   p.share=weightTotal>0?weights[i]/weightTotal*100:0;p.rent=0;
+   if(mode==='passive_joint'&&i!==hi)p.type='passive';
+   if(rentalIds.includes(i)){p.rent=rent*(rentalFunds>0?funds[i]/rentalFunds:1/rentalIds.length);if(mode==='mixed')p.type='rental';}
+   if(mode==='loan'&&i!==hi){p.type='loan';p.loanPrincipal=funds[i];p.loanRate=rate;}
+  });
+  let result;try{result=calculate(s);}catch(e){return {...row,error:e.message};}
+  // Invoice eligibility must remain supportable after changing contractual expenses.
+  if(!s.costVat&&(s.eligiblePurchases||0)/1.1>(result.expense-result.platform-result.purchaseVat-(result.loanInterest||0))*12+1e-7)return {...row,error:'이 계약의 비용보다 적격 매입액이 큽니다. 공제 입력을 확인하세요.'};
+  const host=result.payouts.find(p=>['externalHost','investorHost'].includes(p.role));
+  const investors=result.payouts.filter(p=>p!==host);
+  const sum=ps=>ps.reduce((a,p)=>({pre:a.pre+p.cash,tax:a.tax+p.tax.total,post:a.post+p.cash-p.tax.total}),{pre:0,tax:0,post:0});
+  return {...row,state:s,result,host,investors,hostTotal:sum(host?[host]:[]),investorTotal:sum(investors),total:sum(result.payouts)};
+ });
+}
+
+function settlementFlow(s,r){
+ const hosts=r.payouts.filter(p=>p.role==='externalHost'||p.role==='investorHost');
+ const investors=r.payouts.filter(p=>!hosts.includes(p));
+ const after=ps=>ps.reduce((a,p)=>a+p.cash-p.tax.total,0)/12;
+ const external=r.expense-r.hostFee-r.rents-(r.loanInterest||0)+r.tenantRent;
+ const vat=r.vat.net/12,tax=r.payouts.reduce((a,p)=>a+p.tax.total,0)/12;
+ const hostNet=after(hosts),investorNet=after(investors),net=hostNet+investorNet;
+ let remaining=r.revenue;
+ const steps=[{label:'숙박 매출',start:0,end:remaining,value:remaining,total:true}];
+ for(const [label,amount] of [['외부 비용',external],['부가세 정산',vat],['개인 소득세',tax],['사업 적립금',s.reserve]]){const start=remaining;remaining-=amount;steps.push({label,start,end:remaining,value:-amount,total:false});}
+ steps.push({label:'세후 수령 합계',start:0,end:net,value:net,total:true});
+ return {hosts,investors,external,vat,tax,hostNet,investorNet,net,steps,error:remaining-net,valid:r.validShares||s.structure!=='joint'};
+}
+
+function effectiveTaxRate(cash,tax){return cash>0?tax/cash*100:null;}
+function payoutTaxInfo(p){
+ const type=p.type;
+ const income=type==='loan'?'이자소득':type==='passive'?'배당소득':'사업소득';
+ const national=income==='사업소득'?'종합소득세(사업소득)':income==='배당소득'?'소득세(배당소득 · 종합과세)':'소득세(이자소득)';
+ const basis=type==='loan'?'국세 25% · 금융소득 합계 2,000만원 초과 시 종합·비교과세':type==='passive'?'국세 6~45% 누진·비교과세 · 배당액과 관계없이 종합과세':'국세 6~45% 누진세율 · 과세표준 기준';
+ const withheld=type==='loan'||type==='passive'?'원천징수 27.5% = 국세 25% + 지방세 2.5%':type==='service'&&p.withholdRate>0?'원천징수 3.3% = 국세 3% + 지방세 0.3% · 적격 인적용역 가정':'원천징수 없음 · 이 계산의 선택 조건';
+ return {income,national,local:'개인지방소득세',basis,withheld,rate:effectiveTaxRate(p.cash,p.tax.total)};
+}
+/* PURE CALCULATION END */function validateContract(s){const m=s.contractMode||'custom',expected={owner_service:'joint',active_joint:'joint',passive_joint:'joint',sublease:'rental',loan:'loan',mixed:'joint'};if((m==='custom'&&!['joint','rental'].includes(s.structure))||(expected[m]&&s.structure!==expected[m]))return '계약 조합과 정산 방식이 일치하지 않습니다. 계약 조합을 다시 선택하세요.';if(m==='loan'&&s.people.some((p,i)=>p.type!==(i===s.hostIndex?'active':'loan')))return '대여 계약에서는 호스트 외 참여자를 대여자로 선택하세요.';if(m==='mixed'&&s.people.some(p=>!['active','passive','rental'].includes(p.type)))return '혼합 계약은 일반·출자·전대인 유형을 사용하세요.';if(m==='owner_service'&&s.hostIndex>=0)return '외부 운영용역은 호스트를 별도 외부 호스트로 선택하세요.';
+ if(['active_joint','passive_joint','mixed'].includes(m)&&s.hostIndex<0)return '이 계약에서는 투자자 중 호스트를 선택하세요.';
+ if(m==='owner_service'&&!s.people.some(p=>p.type==='active'))return '투자사업을 경영하는 일반 사업자가 필요합니다.';
+ if(m==='loan'&&s.tenantPerson!=='host')return '대여금 계약에서는 원임차인을 선택한 호스트로 지정하세요.';
+ if(m==='mixed'){const ids=s.people.map((p,i)=>p.type==='rental'?i:-1).filter(i=>i>=0);if(!ids.length)return '혼합 계약에는 전대인이 한 명 이상 필요합니다.';if(ids.includes(s.hostIndex))return '호스트는 전대인과 동일인이 될 수 없습니다.';if(s.tenantPerson==='all'){if(s.people.some((p,i)=>i!==s.hostIndex&&p.type!=='rental'))return '공동임차 선택은 호스트 외 모두 전대인일 때만 가능합니다. 특정 원임차인을 선택하세요.';}else if(ids.length!==1||String(ids[0])!==s.tenantPerson)return '원임차인 선택과 전대인 행을 일치시키세요.';}
+ if(['active_joint','passive_joint'].includes(m)&&s.people.some((p,i)=>p.type!==(i===s.hostIndex||m==='active_joint'?'active':'passive')))return '호스트 변경 후 계약 조합을 다시 선택해 참여 유형을 맞추세요.';
+ if(!['mixed','loan'].includes(m)&&s.people.some(p=>!['active','passive'].includes(p.type)))return '계약 조합에 맞는 일반·출자 참여 유형을 선택하세요.';return '';}
+
+/* PORTFOLIO CORE START */
+const clone=x=>JSON.parse(JSON.stringify(x));
+const numericKeys=['adr','days','occupancy','frequencyValue','clean','laundry','amenity','managerA','managerB','platform','hostRate','repair','other','reserve','amortMonths','taxDep','taxAdjust','priorGross','purchaseVat','eligiblePurchases','premiumMonths'];
+const fixedKeys=['rent','utilities','telecom','insurance','subscription','fixedOther'];
+const personKeys=['repair','deposit','working','leasePremium','subleasePremium','share','rent','loanPrincipal','loanRate','expense'];
+const modes={custom:'직접 설정',owner_service:'외부 운영 용역',active_joint:'일반 공동사업',passive_joint:'출자 공동사업',sublease:'전대 + 호스트 사업',loan:'대여금 + 호스트 사업',mixed:'전대 + 공동사업'};
+function numberValue(v,label,min=0,max=Infinity){const n=Number(v);if(v===''||v===null||v===undefined||!Number.isFinite(n)||n<min||n>max)throw Error(label+' 입력을 확인하세요.');return n;}
+function id(){return 'id-'+(globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+'-'+Math.random().toString(36).slice(2));}
+function newProfile(name){return{id:id(),name,other:0,ded:150,financial:0};}
+function newGroup(name){return{id:id(),name,mode:'auto',priorMode:'forecast',prior:0,extraCurrent:0,excluded:false};}
+function resizeSiteInvestors(site,n){
+ if(!Number.isInteger(n)||n<1||n>20)throw Error('숙소별 투자자는 1~20명입니다.');
+ const next=clone(site),d=next.data,c=d.controls;
+ if(Number(c.hostPerson)>=n)throw Error('제외할 행이 호스트입니다. 먼저 남길 투자자로 호스트를 변경하세요.');
+ if(/^\d+$/.test(String(c.tenantPerson))&&Number(c.tenantPerson)>=n)throw Error('제외할 행이 원임차인입니다. 먼저 원임차인을 변경하세요.');
+ // Remove stale controls too, so later growth cannot revive deleted amounts.
+ Object.keys(c).forEach(k=>{const m=k.match(/^[pt](\d+)_/);if(m&&Number(m[1])>=n)delete c[k];});
+ while(d.people.length<n){
+  const i=d.people.length,p={name:'연결할 투자자 '+(i+1),other:0,ded:150,otherFinancial:0,type:c.contractMode==='loan'?'loan':c.contractMode==='passive_joint'?'passive':'active'};
+  personKeys.forEach(k=>p[k]=0);d.people.push(p);next.bindings.push('');
+  for(const k of ['name','type',...personKeys.filter(k=>k!=='expense'),'otherFinancial'])c[`p${i}_${k}`]=p[k];
+  for(const k of ['expense','other','ded'])c[`t${i}_${k}`]=p[k];
+ }
+ d.people.length=n;next.bindings.length=n;c.count=String(n);return next;
+}
+function hydrate(site,book){
+ const d=site.data,c={...BASE_INPUTS.controls,...d.controls},profiles=new Map(book.people.map(p=>[p.id,p]));
+ if(site.bindings.length!==d.people.length||new Set(site.bindings).size!==site.bindings.length)throw Error('숙소 투자자를 중복 없이 연결하세요.');
+ const pp=d.people.map((p,i)=>{
+  const profile=profiles.get(site.bindings[i]);if(!profile)throw Error('투자자 '+(i+1)+'의 전체 명단 연결이 필요합니다.');
+  const q={...BASE_INPUTS.people[1],...p,id:profile.id,name:profile.name,other:profile.other,ded:profile.ded,otherFinancial:profile.financial};
+  for(const k of personKeys)q[k]=numberValue(d.controls[`p${i}_${k}`]??(k==='expense'?d.controls[`t${i}_expense`]:undefined)??q[k]??0,'투자자 '+(i+1)+' '+k);
+  q.type=d.controls[`p${i}_type`]??q.type;if(!['active','passive','rental','loan'].includes(q.type))throw Error('투자자의 계약 유형을 확인하세요.');return q;
+ });
+ const hostIndex=numberValue(c.hostPerson,'호스트',-1,pp.length-1);if(!Number.isInteger(hostIndex))throw Error('호스트를 선택하세요.');
+ const hp=profiles.get(hostIndex>=0?site.bindings[hostIndex]:site.externalHostId);if(!hp)throw Error('호스트를 전체 명단에 연결하세요.');
+ if(hostIndex<0&&site.bindings.includes(site.externalHostId))throw Error('동일인이 호스트 겸 투자자라면 숙소 편집기에서 겸임 호스트로 선택하세요.');
+ const host={id:hp.id,name:hp.name,other:hp.other,ded:hp.ded,otherFinancial:hp.financial,expense:numberValue(c.h_expense??d.host?.expense??0,'호스트 필요경비'),withholding:numberValue(c.h_withholding??d.host?.withholding??0,'원천징수',0,.033)};
+ const s={people:pp,host,hostIndex,contractMode:c.contractMode,auto:c.autoShares===true||c.autoShares==='true',structure:c.structure,frequencyMode:c.frequencyMode,managerMode:c.managerMode,tenantPerson:c.tenantPerson,leaseType:c.leaseType,priceBasis:c.priceBasis,feeBasis:c.feeBasis,vatMode:c.vatMode,priorMode:c.priorMode,platformVat:c.platformVat,vatExcluded:!!c.vatExcluded};
+ for(const k of numericKeys)s[k]=numberValue(c[k],k,k==='taxAdjust'?-Infinity:0);
+ s.fixed=fixedKeys.map(k=>numberValue(c[k],k));
+ if(s.days>366||s.occupancy>100||Math.abs(s.occupancy*100-Math.round(s.occupancy*100))>1e-7)throw Error('영업일수는 0~366일, 가동률은 0~100%·소수점 둘째 자리입니다.');
+ if(!s.amortMonths||!s.premiumMonths||(s.frequencyMode==='stay'&&!s.frequencyValue))throw Error('평균 숙박일수와 비용 배분 개월은 0보다 커야 합니다.');
+ if([s.hostRate,s.platform,s.managerB].some(v=>v>100))throw Error('매출 대비 요율은 100% 이내로 입력하세요.');
+ for(const [key,allowed] of Object.entries({contractMode:Object.keys(modes),structure:['joint','rental','loan'],frequencyMode:['stay','visits'],managerMode:['A','B','AB'],leaseType:['jeonse','monthly'],priceBasis:['gross','net'],feeBasis:['gross','net'],vatMode:['auto','simple','general'],priorMode:['forecast','manual'],platformVat:['foreign-none','foreign-extra','foreign-included','domestic-extra','domestic-included']}))if(!allowed.includes(s[key]))throw Error(key+' 선택값을 확인하세요.');
+ if(site.costVat){validateCostVat(site.costVat);s.costVat=clone(site.costVat);}
+ if(site.channelMode){validateChannels(site.channels);s.channelMix=clone(site.channels);}
+ const err=validateContract(s);if(err)throw Error(err);
+ if(subleaseEnabled(s)&&(s.tenantPerson==='host'||s.tenantPerson===String(hostIndex)||!s.people.some((p,i)=>tenantEligible(s,i))))throw Error('전대의 원임차인과 호스트를 구분하세요.');
+ return s;
+}
+function normalizedInputs(site,book){
+ const d=clone(site.data),c=d.controls,profiles=new Map(book.people.map(p=>[p.id,p]));
+ d.people.forEach((p,i)=>{const t=profiles.get(site.bindings[i]);if(!t)return;p.name=t.name;p.other=t.other;p.ded=t.ded;p.otherFinancial=t.financial;c[`p${i}_name`]=t.name;c[`t${i}_other`]=t.other;c[`t${i}_ded`]=t.ded;c[`p${i}_otherFinancial`]=t.financial;});
+ const hi=Number(c.hostPerson),t=profiles.get(hi>=0?site.bindings[hi]:site.externalHostId);if(t){d.host={...d.host,other:t.other,ded:t.ded};c.h_other=t.other;c.h_ded=t.ded;}
+ const landlord=profiles.get(site.landlordId);d.linkedLandlordName=landlord?landlord.name:null;if(landlord)c.landlordName=landlord.name;
+ d.channelMix=site.channelMode?clone(site.channels||[]):null;d.costVat=site.costVat?clone(site.costVat):null;
+ return d;
+}
+// Income tax is assessed once per human, across all modeled sites.
+// Passive partnership dividends are excluded from the ordinary financial-income threshold (Article 62).
+function personSiteReturns(owner,basis='all'){
+ const groups=new Map();
+ for(const row of owner.rows){
+  if(row.role==='landlord')continue;
+  if(!groups.has(row.siteId))groups.set(row.siteId,{siteId:row.siteId,name:row.siteName,capital:0,pre:0,post:0,tax:0,separable:true,roles:[]});
+  const x=groups.get(row.siteId);x.capital+=row.capital;x.roles.push(row.kind);
+  if(basis==='investment'){
+   if(row.role==='externalHost')continue;
+   if(row.role==='investorHost'&&!row.investmentReturn?.shareOnly){x.separable=false;continue;}
+   const pre=row.role==='investorHost'?row.shareCash:row.cash,positive=Math.max(0,row.taxable),priority=Math.max(0,row.priorityTaxable||0);
+   const tax=row.allocatedTax*(row.role==='investorHost'?(positive>0?Math.max(0,positive-priority)/positive:0):1);
+   x.pre+=pre;x.tax+=tax;x.post+=pre-tax;
+  }else{x.pre+=row.cash;x.tax+=row.allocatedTax;x.post+=row.cash-row.allocatedTax;}
+ }
+ const rows=[...groups.values()],total={capital:0,pre:0,post:0,tax:0,separable:true};
+ for(const x of rows){for(const k of ['capital','pre','post','tax'])total[k]+=x[k];total.separable&&=x.separable;}
+ for(const x of [...rows,total]){if(!x.separable)x.pre=x.post=x.tax=null;x.preRoi=x.capital>0&&x.pre!==null?x.pre/x.capital*100:null;x.postRoi=x.capital>0&&x.post!==null?x.post/x.capital*100:null;}
+ return{rows,total};
+}
+
+function combinedTax(profile,rows){
+ const other=profile.other,ded=profile.ded,financial=profile.financial;
+ let business=0,passive=0,interest=0,withheld=0,cash=0;
+ rows.forEach(p=>{const positive=Math.max(0,p.taxable);cash+=p.cash;if(p.type==='passive')passive+=positive;else if(p.type==='loan')interest+=positive;else business+=positive;withheld+=p.tax.withheld;});
+ const nationalTotal=(b,d,i)=>{
+  const ordinary=other+b,f=financial+i;
+  const separate=financial*.14+i*.25+Math.max(incomeTax(ordinary+d-ded),incomeTax(ordinary-ded)+d*.14);
+  return f>2000?Math.max(incomeTax(ordinary+d+f-2000-ded)+2000*.14,separate):separate;
+ };
+ const national=Math.max(0,nationalTotal(business,passive,interest)-nationalTotal(0,0,0)),local=national*.1,total=national+local;
+ return {cash,business,passive,interest,national,local,total,withheld,balance:total-withheld,after:cash-total,rate:cash>0?total/cash*100:null,loss:rows.some(p=>p.taxable<0)};
+}
+function validateBook(book){
+ if(!book||book.kind!=='bnb-portfolio'||book.version!==1||!Array.isArray(book.people)||!Array.isArray(book.sites)||!Array.isArray(book.groups)||book.people.length<1||book.people.length>100||book.sites.length>50||book.groups.length>50)throw Error('다숙소 계산기 파일 형식 또는 최대 개수를 확인하세요.');
+ for(const [list,label] of [[book.people,'사람'],[book.sites,'숙소'],[book.groups,'그룹']]){if(new Set(list.map(x=>x.id)).size!==list.length)throw Error(label+' ID가 중복됩니다.');list.forEach(x=>{if(typeof x.id!=='string'||!/^[A-Za-z0-9_-]{1,100}$/.test(x.id)||typeof x.name!=='string'||!x.name.trim()||x.name.length>80)throw Error(label+' 이름과 ID를 확인하세요.');});}
+ book.people.forEach(p=>['other','ded','financial'].forEach(k=>{if(typeof p[k]!=='number')throw Error('개인 세무 입력은 숫자여야 합니다.');numberValue(p[k],p.name+' '+k);}));
+ book.groups.forEach(g=>{if(!['auto','simple','general'].includes(g.mode)||!['forecast','manual'].includes(g.priorMode))throw Error('과세그룹 선택값을 확인하세요.');['prior','extraCurrent'].forEach(k=>{if(typeof g[k]!=='number')throw Error('그룹 매출은 숫자여야 합니다.');numberValue(g[k],'그룹 '+k);});if(typeof g.excluded!=='boolean')throw Error('간이 배제 값을 확인하세요.');});
+ const ids=new Set(book.people.map(p=>p.id)),groups=new Set(book.groups.map(g=>g.id));
+ book.sites.forEach(s=>{if(!s.data||![1,2,3,4,5,6].includes(s.data.version)||!Array.isArray(s.data.people)||!s.data.people.length||s.data.people.length>20||!s.data.controls||!Array.isArray(s.bindings)||!groups.has(s.groupId))throw Error('숙소 데이터 또는 과세그룹을 확인하세요.');if(s.invoiceEligibility!==undefined&&!['unknown','eligible','receiptOnly'].includes(s.invoiceEligibility))throw Error('세금계산서 발급 자격 선택값을 확인하세요.');if(s.channelMode!==undefined&&typeof s.channelMode!=='boolean')throw Error('채널 계산 선택값을 확인하세요.');if(s.channels!==undefined)validateChannels(s.channels,false);if(s.costVat!==undefined)validateCostVat(s.costVat);for(const k of ['landlordExpense','landlordDepreciation'])if(s[k]!==undefined&&(typeof s[k]!=='number'||!Number.isFinite(s[k])||s[k]<0))throw Error('건물주 경비는 0 이상의 숫자입니다.');if(s.landlordTaxMode!==undefined&&!['aggregate','review'].includes(s.landlordTaxMode))throw Error('건물주 과세 방식 선택값을 확인하세요.');if(s.bindings.some(x=>x!==''&&!ids.has(x))||(s.externalHostId&&!ids.has(s.externalHostId))||(s.landlordId&&!ids.has(s.landlordId)))throw Error('존재하지 않는 사람 연결입니다.');});
+ return book;
+}
+function portfolio(book){
+ const errors=[],sites=[],states=new Map(),groups=new Map(),people=new Map(book.people.map(p=>[p.id,{profile:p,rows:[],capital:0}]));
+ book.groups.forEach(g=>groups.set(g.id,{...g,current:g.extraCurrent,sites:[],prior:0}));
+ book.sites.filter(site=>site.enabled!==false).forEach(site=>{try{const s=hydrate(site,book),g=groups.get(site.groupId);if(!g)throw Error('과세그룹을 선택하세요.');states.set(site.id,s);const nights=s.days*s.occupancy/100/12,base=nights*s.adr*(s.priceBasis==='net'?1.1:1);const plan=s.channelMix?channelMetrics(s.channelMix,nights,base,s.feeBasis,s.priceBasis):null;g.current+=(plan?plan.taxableGross:base)*12;if(plan?.rows.some(c=>c.taxType==='rental'&&c.share>0))g.hasRental=true;g.sites.push(site.id);}catch(e){errors.push({id:site.id,name:site.name,message:e.message});}});
+ groups.forEach(g=>{const source=book.groups.find(x=>x.id===g.id);g.prior=source.priorMode==='manual'?source.prior:g.current;g.actualMode=g.excluded?'general':g.mode==='auto'?(Math.round(g.prior*10000)<104000000?'simple':'general'):g.mode;});
+ book.sites.filter(site=>site.enabled!==false&&states.has(site.id)).forEach(site=>{try{
+  const s=states.get(site.id),g=groups.get(site.groupId);if(g.hasRental&&g.mode==='auto'&&!g.excluded)throw Error('과세 부동산임대가 포함된 그룹은 등록된 과세유형(일반/간이)을 직접 선택하세요. 임대업 간이 기준 4,800만원·지역 배제 등을 확인해야 합니다.');s.portfolioVat={mode:g.actualMode,previous:g.prior};
+  const r=calculate(s);if(s.structure==='joint'&&!r.validShares)throw Error('공동사업 지분 합계를 100%로 맞추세요.');
+  if(!s.costVat&&(s.eligiblePurchases/11>s.purchaseVat*12+1e-7||s.eligiblePurchases/1.1>(r.expense-r.platform-r.purchaseVat-r.loanInterest)*12+1e-7))throw Error('적격 매입액과 실제 지급 부가세를 확인하세요.');
+  const result={site,state:s,result:r,rows:[],post:0,tax:0,landlordGross:0,landlordCosts:0};
+  const rentOwner=people.get(site.landlordId);
+  if(rentOwner){
+   const expense=numberValue(site.landlordExpense??0,'건물주 연 실제 경비'),depreciation=numberValue(site.landlordDepreciation??0,'건물주 연 감가상각');
+   if(site.landlordTaxMode==='review'&&(r.monthlyRent>0||expense>0||depreciation>0))throw Error('건물주 임대소득 과세 방식을 확인하세요. 현재는 종합과세 모형만 지원합니다.');
+   result.landlordGross=r.monthlyRent*12;result.landlordCosts=expense;
+   const cash=result.landlordGross-expense,taxable=cash-depreciation;
+   r.payouts.push({name:rentOwner.profile.name,kind:'건물주 · 임대사업소득',type:'rental',role:'landlord',person:rentOwner.profile,cash,taxable,grossRent:result.landlordGross,actualExpense:expense,depreciation,tax:personTax(cash,taxable,'rental',rentOwner.profile,0),investmentReturn:null});
+  }
+  r.payouts.forEach(p=>{const owner=people.get(p.person.id);if(!owner)throw Error('수령자 연결을 확인하세요.');const row={...p,siteId:site.id,siteName:site.name,personId:owner.profile.id,capital:p.investmentReturn?.capital||0,allocatedTax:0};result.rows.push(row);owner.rows.push(row);owner.capital+=row.capital;});sites.push(result);
+ }catch(e){errors.push({id:site.id,name:site.name,message:e.message});}});
+ // Never present an incomplete total as the whole portfolio: tax applies only when all included sites are valid.
+ if(errors.length)return{valid:false,errors,sites,groups:[...groups.values()],people:[],totals:null};
+ const persons=[...people.values()].map(owner=>{
+  owner.tax=combinedTax(owner.profile,owner.rows);const weight=owner.rows.reduce((a,p)=>a+Math.max(0,p.taxable),0);
+  owner.rows.forEach(row=>row.allocatedTax=weight>0?owner.tax.total*Math.max(0,row.taxable)/weight:0);
+  owner.pre=owner.tax.cash;owner.post=owner.tax.after;owner.rentalRows=owner.rows.filter(p=>p.role==='landlord');owner.rentalPre=owner.rentalRows.reduce((a,p)=>a+p.cash,0);owner.rentalTax=owner.rentalRows.reduce((a,p)=>a+p.allocatedTax,0);owner.returnPre=owner.pre-owner.rentalPre;owner.returnPost=owner.post-owner.rentalPre+owner.rentalTax;owner.preRoi=owner.capital>0?owner.returnPre/owner.capital*100:null;owner.postRoi=owner.capital>0?owner.returnPost/owner.capital*100:null;
+  owner.investmentPre=0;owner.investmentPost=0;owner.separable=true;
+  owner.rows.forEach(p=>{if(['externalHost','landlord'].includes(p.role))return;if(p.role==='investorHost'&&!p.investmentReturn?.shareOnly){owner.separable=false;return;}const cash=p.role==='investorHost'?p.shareCash:p.cash;const pos=Math.max(0,p.taxable),priority=Math.max(0,p.priorityTaxable||0);const taxShare=p.role==='investorHost'?(pos>0?Math.max(0,pos-priority)/pos:0):1;owner.investmentPre+=cash;owner.investmentPost+=cash-p.allocatedTax*taxShare;});
+  return owner;
+ });
+ sites.forEach(x=>{x.tax=x.rows.reduce((a,p)=>a+p.allocatedTax,0);x.pre=x.rows.reduce((a,p)=>a+p.cash,0);x.post=x.pre-x.tax;});
+ const totals={capital:0,revenue:0,external:0,vat:0,reserve:0,pre:0,tax:0,post:0,returnPost:0};
+ sites.forEach(x=>{const r=x.result;totals.capital+=r.capital.total;totals.revenue+=r.revenue*12;totals.external+=(r.expense-r.hostFee-r.rents-r.loanInterest+r.tenantRent)*12-x.landlordGross+x.landlordCosts;totals.vat+=r.vat.net;totals.reserve+=x.state.reserve*12;totals.pre+=x.pre;totals.tax+=x.tax;totals.post+=x.post;});
+ totals.returnPost=persons.reduce((a,p)=>a+p.returnPost,0);
+ totals.check=totals.revenue-totals.external-totals.vat-totals.reserve-totals.tax-totals.post;
+ return{valid:true,errors:[],sites,groups:[...groups.values()],people:persons,totals};
+}
+/* PORTFOLIO CORE END */
+
+function makeData(mode,rows,hi,extra={}){
+ const d=clone(BASE_INPUTS);d.people=rows.map((p,i)=>({...BASE_INPUTS.people[1],repair:0,deposit:0,working:0,rent:0,share:0,type:i===hi?'active':mode==='loan'?'loan':mode==='passive_joint'?'passive':'active',...p}));
+ Object.keys(d.controls).forEach(k=>{if(/^p\d+_|^t\d+_/.test(k))delete d.controls[k];});
+ Object.assign(d.controls,{contractMode:mode,structure:mode==='loan'?'loan':mode==='sublease'?'rental':'joint',hostPerson:String(hi),count:String(rows.length),tenantPerson:mode==='loan'?'host':'all',autoShares:true,...extra});
+ d.people.forEach((p,i)=>{for(const k of ['name','type',...personKeys.filter(k=>k!=='expense'),'otherFinancial'])d.controls[`p${i}_${k}`]=p[k]??0;for(const k of ['expense','other','ded'])d.controls[`t${i}_${k}`]=p[k];});return d;
+}
+function exampleBook(){
+ const pp=[newProfile('호스트 가'),newProfile('투자자 가'),newProfile('투자자 나'),newProfile('호스트 나')],gg=[newGroup('A 공동사업'),newGroup('B 공동사업'),newGroup('C 단독사업')];
+ const a=makeData('active_joint',[{deposit:3000,repair:2000,working:300},{deposit:6000},{deposit:3000}],0);
+ const b=makeData('passive_joint',[{deposit:2000,repair:1500,working:200},{deposit:4000},{deposit:4000}],0,{adr:15,occupancy:68,occRange:68});
+ const c=makeData('loan',[{deposit:2000,repair:1000,working:200},{loanPrincipal:6000,loanRate:6},{loanPrincipal:4000,loanRate:6}],0,{adr:10,occupancy:80,occRange:80});
+ return{kind:'bnb-portfolio',version:1,people:pp,groups:gg,sites:[{id:id(),name:'숙소 A · 도심',groupId:gg[0].id,bindings:[pp[0].id,pp[1].id,pp[2].id],externalHostId:pp[3].id,enabled:true,data:a},{id:id(),name:'숙소 B · 관광지',groupId:gg[1].id,bindings:[pp[3].id,pp[1].id,pp[2].id],externalHostId:pp[0].id,enabled:true,data:b},{id:id(),name:'숙소 C · 역세권',groupId:gg[2].id,bindings:[pp[0].id,pp[1].id,pp[2].id],externalHostId:pp[3].id,enabled:true,data:c}]};
+}
+
+function incomeParts(owner){
+ const map=new Map();function add(label,gross,expense,pre,tax){if(!map.has(label))map.set(label,{label,gross:0,expense:0,pre:0,tax:0,post:0});const x=map.get(label);x.gross+=gross;x.expense+=expense;x.pre+=pre;x.tax+=tax;x.post+=pre-tax;}
+ owner.rows.forEach(p=>{
+  if(p.role==='landlord'){add('건물주 임대료',p.grossRent,p.actualExpense,p.cash,p.allocatedTax);return;}
+  if(p.role==='investorHost'&&p.investmentReturn?.shareOnly){const weight=Math.max(0,p.taxable),priority=Math.max(0,p.priorityTaxable||0),tax=weight>0?p.allocatedTax*Math.min(1,priority/weight):0;add('호스트 운영 보수',p.priority,0,p.priority,tax);add('투자 지분 배분금',p.shareCash,0,p.shareCash,p.allocatedTax-tax);return;}
+  const label=p.role==='externalHost'?'호스트 수익':p.role==='investorHost'?'단독사업 잔여 수익':p.type==='loan'?'대여금 이자':p.type==='rental'?'전대 순수입':'투자 지분 배분금';add(label,p.cash,0,p.cash,p.allocatedTax);
+ });return [...map.values()];
+}
+
+const el=id=>document.getElementById(id);
+const escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const nf=(v,n=1)=>Number.isFinite(v)?v.toLocaleString('ko-KR',{minimumFractionDigits:n,maximumFractionDigits:n}):'—';
+const pct=v=>v===null?'—':nf(v,2)+'%';
+const cash=v=>nf(v)+'만원';
+const recovery=(capital,annual)=>capital<=0?'—':annual<=0?'회수 불가':nf(capital/annual,1)+'년';
+let activePage=0,activeReport=null;
+const slideNames=['한눈에','숙소별','정산','확인사항'];
+function displayReport(d){
+ activeReport=d;el('identity').innerHTML=`<h2>${escapeHtml(d.name)} 님의 투자 브리핑</h2><span class="badge ${d.demo?'demo':''}">${d.demo?'예시 데이터':'개인 전용 요약'}</span>`;
+ const hasRent=Math.abs(d.rentalPre)>0,hasHost=d.hasHost;
+ const max=Math.max(1,...d.sites.map(s=>Math.abs(s.post/12)));
+ el('slides').innerHTML=`<section class="pt-slide" data-slide="0"><p class="page-label">01 / YOUR RETURN</p><h1>내 투자, 매달<br>얼마가 남을까요?</h1><div class="hero"><p class="caption">예상 월 세후 수령액 ${hasRent?'· 임대수익 포함':''}</p><strong class="big">${nf(d.post/12)}<span class="unit">만원</span></strong><p class="annual">연 ${cash(d.post)} · ${d.sites.length}개 숙소 합산</p></div><div class="stats"><div class="stat"><span>총 투자금</span><strong>${cash(d.capital)}</strong></div><div class="stat"><span>세후 연 수익률</span><strong>${pct(d.returnPostRoi)}</strong><small>운영·투자수입 기준</small></div><div class="stat"><span>세전 연 수익률</span><strong>${pct(d.returnPreRoi)}</strong><small>운영·투자수입 기준</small></div><div class="stat"><span>수익으로 회수 · 세후</span><strong>${recovery(d.capital,d.returnPost)}</strong><small>원금 반환 일정과 다름</small></div></div>${hasHost?`<div class="note"><b>호스트 겸임 수익을 구분합니다.</b><br>운영 보수 포함: 세전 ${pct(d.returnPreRoi)} / 세후 ${pct(d.returnPostRoi)}<br>투자수입만: ${d.separable?`세전 ${pct(d.investmentPreRoi)} / 세후 ${pct(d.investmentPostRoi)}`:'단독사업 수익이라 분리 계산 불가'}</div>`:''}<p class="footnote">${hasRent?'수령액에는 임대수익이 포함되며, 수익률·회수기간에서는 제외합니다. ':''}금액은 만원. 현재 운영 가정의 예상치이며 수익을 보장하지 않습니다.</p></section>
+ <section class="pt-slide" data-slide="1"><p class="page-label">02 / MY PROPERTIES</p><h1>어느 숙소에서<br>얼마를 받을까요?</h1><p class="muted">내 투자금과 내 수령액만 표시합니다. 세후액은 개인 합산세금 안분 후 금액입니다.</p>${d.sites.map(s=>`<article class="card ${s.post<0?'negative':''}"><div class="card-head"><div><h3>${escapeHtml(s.name)}</h3><span class="pill">${escapeHtml(s.contract)}</span></div><div class="amount">${cash(s.post/12)}<small class="muted"> / 월 세후</small></div></div><div class="bar" role="img" aria-label="월 세후 ${cash(s.post/12)}"><i style="width:${Math.abs(s.post/12)/max*100}%"></i></div><div class="metrics-row"><div><small>내 투자금</small><strong>${cash(s.capital)}</strong></div><div><small>월 세전 수령</small><strong>${cash(s.pre/12)}</strong></div><div><small>세후 연 수익률¹</small><strong>${pct(s.postRoi)}</strong></div></div><details><summary class="muted">내 자금 구성·운영 가정</summary><p class="muted">${s.capitalParts.map(p=>`${escapeHtml(p.label)} ${cash(p.value)}`).join(' · ')||'투자금 없음'}</p><p class="muted">가동률 ${nf(s.occupancy,2)}% · 연 영업 ${nf(s.days,0)}일 · 평균 1박 ${cash(s.adr)}<br>${escapeHtml(s.adrBasis)} · ${escapeHtml(s.vatLabel)}</p>${s.rentalPre?`<p class="muted">내 임대 순수입: 월 세전 ${cash(s.rentalPre/12)} · 세후 ${cash(s.rentalPost/12)} (위 수령액에 포함)</p>`:''}</details></article>`).join('')}<div class="card"><div class="card-head"><b>전체 합계</b><b>${cash(d.post/12)} / 월 세후</b></div><p class="footnote">투자금 ${cash(d.capital)} · 연 세전 ${cash(d.pre)} · 연 세후 ${cash(d.post)}</p></div><p class="footnote">¹ 수익률은 건물주 임대수익 제외, 운영 보수 포함입니다. 숙소별 수익률의 단순 평균이 아닌 합계 투자금 기준으로 계산합니다.</p></section>
+ <section class="pt-slide" data-slide="2"><p class="page-label">03 / SETTLEMENT</p><h1>내 몫에서 세금을 빼면<br>최종 수령액입니다.</h1><p class="muted">숙소 운영비·부가세·적립금을 반영한 개인 배분액에서 시작합니다.</p><div class="card flow"><div class="flow-row"><span>내 세전 수령액</span><strong>${cash(d.pre/12)}</strong></div><div class="flow-row"><span>예상 개인 세금<small>소득세 + 지방소득세 · 월 환산</small></span><strong>− ${cash(d.tax/12)}</strong></div><div class="flow-row total"><span>월 세후 수령액</span><strong>${cash(d.post/12)}</strong></div></div><div class="summary-title"><h3>수입 종류별 내역</h3><span>월평균</span></div><div class="parts">${d.parts.map(p=>`<div class="part"><span>${escapeHtml(p.label)}</span><b>${cash(p.post/12)}</b><small>세전 ${cash(p.pre/12)} − 세금 ${cash(p.tax/12)}</small></div>`).join('')}</div><div class="note" style="margin-top:20px">연 소득세 ${cash(d.national)} + 지방소득세 ${cash(d.local)}<br>실효세율 ${pct(d.effectiveRate)} · 세전 현금 대비</div><p class="footnote">다른 숙소 소득을 합산한 세금 증가분입니다. 원천징수는 다시 차감하지 않습니다. 건보료·연금·세액공제는 제외하며 실제 입금일의 금액과 다를 수 있습니다.</p></section>
+ <section class="pt-slide" data-slide="3"><p class="page-label">04 / BEFORE YOU DECIDE</p><h1>수익과 원금은<br>나눠서 확인하세요.</h1><ul class="rule-list"><li><b>① 계약과 내 권리</b>손익 배분, 보증금 반환 대상, 지급 시기와 중도 해지 조건을 계약서로 확인합니다.</li><li><b>② 수익은 운영 가정입니다</b>가동률·객단가·비용이 바뀌면 수령액도 달라집니다. 손실이 발생할 수 있습니다.</li><li><b>③ 회수기간의 의미</b>총 투자금 ÷ 연 운영·투자 수입입니다. 보증금 반환·대여금 원금 상환을 더하지 않습니다.</li><li><b>④ 세금은 개인별로 다릅니다</b>계약·다른 소득·공제에 따라 달라집니다. 이 자료는 기존 계산기 모형의 추정치입니다.</li></ul><div class="note">${escapeHtml(d.source)}<br>작성: ${escapeHtml(d.created)} · 금액 단위: 만원<br>기존 계산기의 입력값 변경은 이 자료에 자동 반영되지 않습니다.</div><p class="footnote">이 화면에는 선택한 사람의 결과만 표시합니다. 공유용 HTML에는 다른 사람의 명단·투자내역·원본 입력을 넣지 않습니다.</p></section>`;
+ goPage(0);
+}
+function goPage(n){activePage=Math.max(0,Math.min(3,n));document.querySelectorAll('[data-slide]').forEach(s=>s.hidden=Number(s.dataset.slide)!==activePage);document.querySelectorAll('[data-page]').forEach(b=>b.setAttribute('aria-current',Number(b.dataset.page)===activePage?'step':'false'));el('pageCount').textContent=(activePage+1)+' / 4';el('prev').disabled=activePage===0;el('next').disabled=activePage===3;window.scrollTo?.({top:0,behavior:'instant'});}
+function bindViewer(){document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>goPage(Number(b.dataset.page)));el('prev').onclick=()=>goPage(activePage-1);el('next').onclick=()=>goPage(activePage+1);document.addEventListener('keydown',e=>{if(document.querySelector('dialog[open]')||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;if(e.key==='ArrowRight')goPage(activePage+1);if(e.key==='ArrowLeft')goPage(activePage-1);});}
+
+const PT_CSS=":root{font-family:-apple-system,BlinkMacSystemFont,\"Apple SD Gothic Neo\",\"Noto Sans KR\",sans-serif;color:#173c36;background:#f2f4ef;font-size:16px;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,select,input{font:inherit}button,a,label.file{touch-action:manipulation}button,select,.file{min-height:46px;border-radius:12px;border:1px solid #cbd8ce;background:white;padding:10px 14px;color:inherit;cursor:pointer}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #cb7409;outline-offset:3px}button:disabled{opacity:.4;cursor:default}a{color:#236c53}p{line-height:1.6}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(1.8rem,6vw,2.7rem);letter-spacing:-.05em;line-height:1.22}h2{font-size:1.5rem;letter-spacing:-.035em}h3{font-size:1.1rem}.eyebrow{font-size:.72rem;letter-spacing:.16em;font-weight:750}.topbar{max-width:860px;margin:auto;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{font-weight:850;letter-spacing:-.05em;font-size:1.25rem}.topbar small{display:block;font-size:.68rem;letter-spacing:.12em;font-weight:500;margin-top:3px}.controls{display:flex;gap:6px}.topbar button{font-size:.82rem;padding:8px 11px}.wrap{max-width:800px;margin:auto;padding:0 20px 120px}.identity{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:10px 0 22px}.identity h2{font-size:1.05rem;margin:0;overflow-wrap:anywhere}.badge{background:#deebe1;color:#245b42;font-size:.73rem;padding:7px 10px;border-radius:100px;white-space:nowrap}.demo{background:#fff0cd;color:#815216}.page-label{font-size:.74rem;letter-spacing:.12em;color:#587164;margin:0 0 9px}.hero{background:#163f34;color:#f9ffec;border-radius:26px;padding:28px 24px;position:relative;overflow:hidden}.hero:after{content:\"\";position:absolute;border:1px solid #658d6b;border-radius:50%;width:230px;height:230px;right:-95px;top:-115px;pointer-events:none}.hero .caption{color:#b9d8c2;font-size:.9rem;margin-bottom:14px}.hero .big{display:block;font-size:clamp(3rem,12vw,5rem);line-height:1.06;font-weight:750;letter-spacing:-.065em;font-variant-numeric:tabular-nums}.unit{font-size:1rem;margin-left:8px;letter-spacing:0}.hero .annual{margin-top:18px;color:#e6efcb}.hero p:last-child{margin-bottom:0}.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0 24px}.stat,.card{background:#fff;border:1px solid #dde4da;border-radius:18px;padding:18px}.stat span{font-size:.8rem;color:#617568;display:block;margin-bottom:9px}.stat strong{font-size:1.45rem;letter-spacing:-.04em}.stat small{display:block;font-size:.71rem;color:#64746b;margin-top:6px}.muted{font-size:.8rem;color:#607368}.note{background:#e8eee4;border-radius:12px;padding:12px 14px;font-size:.8rem;line-height:1.65}.card{margin:12px 0}.card h3{overflow-wrap:anywhere;margin-bottom:6px}.card-head{display:flex;align-items:start;justify-content:space-between;gap:12px}.card-head .amount{white-space:nowrap;font-size:1.35rem;font-weight:750;letter-spacing:-.045em}.pill{font-size:.71rem;background:#f0f3ec;padding:4px 8px;border-radius:7px;display:inline-block;margin:3px 4px 8px 0}.metrics-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;border-top:1px solid #e9eee5;margin-top:12px;padding-top:12px}.metrics-row small{display:block;color:#627467;font-size:.69rem}.metrics-row strong{font-size:.95rem;display:block;margin-top:6px}.bar{height:8px;background:#e7ede3;border-radius:20px;margin-top:13px;overflow:hidden}.bar i{height:100%;display:block;background:#6f9459;border-radius:20px}.negative{color:#b34732}.negative .bar i{background:#b34732}.flow{display:grid;gap:8px}.flow-row{display:flex;justify-content:space-between;gap:15px;padding:16px 0;border-bottom:1px solid #dce5d7}.flow-row strong{white-space:nowrap}.flow-row.total{background:#163f34;color:white;padding:18px;border-radius:12px;border:0}.flow-row small{display:block;color:#607368;font-size:.74rem}.parts{display:grid;gap:10px}.part{border-left:3px solid #8caa6b;padding:8px 12px;background:#f8faf5}.part b{float:right}.part small{display:block;margin-top:5px;color:#607368}.rule-list{padding:0;list-style:none}.rule-list li{padding:15px 0;border-top:1px solid #dce3d7;line-height:1.5;font-size:.88rem}.rule-list b{display:block;margin-bottom:5px}.footnote{font-size:.72rem;color:#637369;line-height:1.6;margin-top:18px}.bottom{position:fixed;bottom:0;left:0;right:0;background:#f9fbf5f5;backdrop-filter:blur(12px);border-top:1px solid #d8e3d3;padding:10px 16px max(12px,env(safe-area-inset-bottom));z-index:5}.bottom-inner{max-width:760px;margin:auto;display:flex;gap:8px;align-items:center}.bottom button{flex:1;font-size:.78rem;padding:10px 5px;background:transparent;border:0}.bottom button[aria-current=\"step\"]{background:#173f34;color:white}.next-row{display:flex;justify-content:space-between;align-items:center;margin:25px 0 0;gap:12px}.next-row button{min-width:98px}.primary{background:#173f34!important;color:#fff!important;border-color:#173f34!important}.page-count{font-size:.8rem;color:#617065}dialog{border:1px solid #d2dfcc;border-radius:23px;max-width:480px;width:calc(100% - 30px);padding:23px;color:#173c36;max-height:88dvh}dialog::backdrop{background:#102d2480;backdrop-filter:blur(4px)}dialog h2{margin-bottom:8px}dialog label{display:block;font-size:.85rem;margin:16px 0 7px}dialog select{width:100%}dialog .actions{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}dialog .actions button,.file{flex:1;text-align:center;font-size:.84rem}dialog label.file{margin:0;display:flex;align-items:center;justify-content:center}dialog .check{display:flex;align-items:center;gap:10px}input[type=checkbox]{width:20px;height:20px}.notice{font-size:.85rem;background:#fff0d4;padding:12px;border-radius:12px;margin:10px 0;line-height:1.5}.other-card{border:2px dashed #b17632;background:#fff8e9}.empty{text-align:center;padding:50px 12px}.export-only .settings-only{display:none!important}[hidden]{display:none!important}.summary-title{display:flex;align-items:center;gap:10px;margin-top:24px}.summary-title span{font-size:.7rem;color:#6c7c70}.subtle{border:0!important;background:transparent!important;text-decoration:underline}.print-all .pt-slide{display:block!important;break-after:page}.print-all .next-row{display:none}.card,.hero,.part{break-inside:avoid}@media(min-width:700px){.hero{padding:36px}.stats{grid-template-columns:repeat(4,1fr)}.hero .big{font-size:5rem}.wrap{padding-top:10px}}@media(max-width:360px){.wrap{padding-left:14px;padding-right:14px}.topbar{padding:14px}.metrics-row{grid-template-columns:1fr 1fr}.card-head{flex-direction:column}.topbar small{display:none}}@media print{body{background:white;color:#173c36}.topbar,.bottom,dialog,.next-row,.settings-only,#others{display:none!important}.wrap{max-width:none;padding:0}.pt-slide{display:block!important;break-after:page}.hero{background:#edf4e7!important;color:#173c36!important}.hero .caption,.hero .annual{color:#173c36}.stat,.card{box-shadow:none}.identity{margin-bottom:15px}}\n";const PT_VIEWER="const el=id=>document.getElementById(id);\nconst escapeHtml=s=>String(s??'').replace(/[&\u003c>\"']/g,c=>({'&':'&amp;','\u003c':'&lt;','>':'&gt;','\"':'&quot;',\"'\":'&#39;'}[c]));\nconst nf=(v,n=1)=>Number.isFinite(v)?v.toLocaleString('ko-KR',{minimumFractionDigits:n,maximumFractionDigits:n}):'—';\nconst pct=v=>v===null?'—':nf(v,2)+'%';\nconst cash=v=>nf(v)+'만원';\nconst recovery=(capital,annual)=>capital\u003c=0?'—':annual\u003c=0?'회수 불가':nf(capital/annual,1)+'년';\nlet activePage=0,activeReport=null;\nconst slideNames=['한눈에','숙소별','정산','확인사항'];\nfunction displayReport(d){\n activeReport=d;el('identity').innerHTML=`\u003ch2>${escapeHtml(d.name)} 님의 투자 브리핑\u003c/h2>\u003cspan class=\"badge ${d.demo?'demo':''}\">${d.demo?'예시 데이터':'개인 전용 요약'}\u003c/span>`;\n const hasRent=Math.abs(d.rentalPre)>0,hasHost=d.hasHost;\n const max=Math.max(1,...d.sites.map(s=>Math.abs(s.post/12)));\n el('slides').innerHTML=`\u003csection class=\"pt-slide\" data-slide=\"0\">\u003cp class=\"page-label\">01 / YOUR RETURN\u003c/p>\u003ch1>내 투자, 매달\u003cbr>얼마가 남을까요?\u003c/h1>\u003cdiv class=\"hero\">\u003cp class=\"caption\">예상 월 세후 수령액 ${hasRent?'· 임대수익 포함':''}\u003c/p>\u003cstrong class=\"big\">${nf(d.post/12)}\u003cspan class=\"unit\">만원\u003c/span>\u003c/strong>\u003cp class=\"annual\">연 ${cash(d.post)} · ${d.sites.length}개 숙소 합산\u003c/p>\u003c/div>\u003cdiv class=\"stats\">\u003cdiv class=\"stat\">\u003cspan>총 투자금\u003c/span>\u003cstrong>${cash(d.capital)}\u003c/strong>\u003c/div>\u003cdiv class=\"stat\">\u003cspan>세후 연 수익률\u003c/span>\u003cstrong>${pct(d.returnPostRoi)}\u003c/strong>\u003csmall>운영·투자수입 기준\u003c/small>\u003c/div>\u003cdiv class=\"stat\">\u003cspan>세전 연 수익률\u003c/span>\u003cstrong>${pct(d.returnPreRoi)}\u003c/strong>\u003csmall>운영·투자수입 기준\u003c/small>\u003c/div>\u003cdiv class=\"stat\">\u003cspan>수익으로 회수 · 세후\u003c/span>\u003cstrong>${recovery(d.capital,d.returnPost)}\u003c/strong>\u003csmall>원금 반환 일정과 다름\u003c/small>\u003c/div>\u003c/div>${hasHost?`\u003cdiv class=\"note\">\u003cb>호스트 겸임 수익을 구분합니다.\u003c/b>\u003cbr>운영 보수 포함: 세전 ${pct(d.returnPreRoi)} / 세후 ${pct(d.returnPostRoi)}\u003cbr>투자수입만: ${d.separable?`세전 ${pct(d.investmentPreRoi)} / 세후 ${pct(d.investmentPostRoi)}`:'단독사업 수익이라 분리 계산 불가'}\u003c/div>`:''}\u003cp class=\"footnote\">${hasRent?'수령액에는 임대수익이 포함되며, 수익률·회수기간에서는 제외합니다. ':''}금액은 만원. 현재 운영 가정의 예상치이며 수익을 보장하지 않습니다.\u003c/p>\u003c/section>\n \u003csection class=\"pt-slide\" data-slide=\"1\">\u003cp class=\"page-label\">02 / MY PROPERTIES\u003c/p>\u003ch1>어느 숙소에서\u003cbr>얼마를 받을까요?\u003c/h1>\u003cp class=\"muted\">내 투자금과 내 수령액만 표시합니다. 세후액은 개인 합산세금 안분 후 금액입니다.\u003c/p>${d.sites.map(s=>`\u003carticle class=\"card ${s.post\u003c0?'negative':''}\">\u003cdiv class=\"card-head\">\u003cdiv>\u003ch3>${escapeHtml(s.name)}\u003c/h3>\u003cspan class=\"pill\">${escapeHtml(s.contract)}\u003c/span>\u003c/div>\u003cdiv class=\"amount\">${cash(s.post/12)}\u003csmall class=\"muted\"> / 월 세후\u003c/small>\u003c/div>\u003c/div>\u003cdiv class=\"bar\" role=\"img\" aria-label=\"월 세후 ${cash(s.post/12)}\">\u003ci style=\"width:${Math.abs(s.post/12)/max*100}%\">\u003c/i>\u003c/div>\u003cdiv class=\"metrics-row\">\u003cdiv>\u003csmall>내 투자금\u003c/small>\u003cstrong>${cash(s.capital)}\u003c/strong>\u003c/div>\u003cdiv>\u003csmall>월 세전 수령\u003c/small>\u003cstrong>${cash(s.pre/12)}\u003c/strong>\u003c/div>\u003cdiv>\u003csmall>세후 연 수익률¹\u003c/small>\u003cstrong>${pct(s.postRoi)}\u003c/strong>\u003c/div>\u003c/div>\u003cdetails>\u003csummary class=\"muted\">내 자금 구성·운영 가정\u003c/summary>\u003cp class=\"muted\">${s.capitalParts.map(p=>`${escapeHtml(p.label)} ${cash(p.value)}`).join(' · ')||'투자금 없음'}\u003c/p>\u003cp class=\"muted\">가동률 ${nf(s.occupancy,2)}% · 연 영업 ${nf(s.days,0)}일 · 평균 1박 ${cash(s.adr)}\u003cbr>${escapeHtml(s.adrBasis)} · ${escapeHtml(s.vatLabel)}\u003c/p>${s.rentalPre?`\u003cp class=\"muted\">내 임대 순수입: 월 세전 ${cash(s.rentalPre/12)} · 세후 ${cash(s.rentalPost/12)} (위 수령액에 포함)\u003c/p>`:''}\u003c/details>\u003c/article>`).join('')}\u003cdiv class=\"card\">\u003cdiv class=\"card-head\">\u003cb>전체 합계\u003c/b>\u003cb>${cash(d.post/12)} / 월 세후\u003c/b>\u003c/div>\u003cp class=\"footnote\">투자금 ${cash(d.capital)} · 연 세전 ${cash(d.pre)} · 연 세후 ${cash(d.post)}\u003c/p>\u003c/div>\u003cp class=\"footnote\">¹ 수익률은 건물주 임대수익 제외, 운영 보수 포함입니다. 숙소별 수익률의 단순 평균이 아닌 합계 투자금 기준으로 계산합니다.\u003c/p>\u003c/section>\n \u003csection class=\"pt-slide\" data-slide=\"2\">\u003cp class=\"page-label\">03 / SETTLEMENT\u003c/p>\u003ch1>내 몫에서 세금을 빼면\u003cbr>최종 수령액입니다.\u003c/h1>\u003cp class=\"muted\">숙소 운영비·부가세·적립금을 반영한 개인 배분액에서 시작합니다.\u003c/p>\u003cdiv class=\"card flow\">\u003cdiv class=\"flow-row\">\u003cspan>내 세전 수령액\u003c/span>\u003cstrong>${cash(d.pre/12)}\u003c/strong>\u003c/div>\u003cdiv class=\"flow-row\">\u003cspan>예상 개인 세금\u003csmall>소득세 + 지방소득세 · 월 환산\u003c/small>\u003c/span>\u003cstrong>− ${cash(d.tax/12)}\u003c/strong>\u003c/div>\u003cdiv class=\"flow-row total\">\u003cspan>월 세후 수령액\u003c/span>\u003cstrong>${cash(d.post/12)}\u003c/strong>\u003c/div>\u003c/div>\u003cdiv class=\"summary-title\">\u003ch3>수입 종류별 내역\u003c/h3>\u003cspan>월평균\u003c/span>\u003c/div>\u003cdiv class=\"parts\">${d.parts.map(p=>`\u003cdiv class=\"part\">\u003cspan>${escapeHtml(p.label)}\u003c/span>\u003cb>${cash(p.post/12)}\u003c/b>\u003csmall>세전 ${cash(p.pre/12)} − 세금 ${cash(p.tax/12)}\u003c/small>\u003c/div>`).join('')}\u003c/div>\u003cdiv class=\"note\" style=\"margin-top:20px\">연 소득세 ${cash(d.national)} + 지방소득세 ${cash(d.local)}\u003cbr>실효세율 ${pct(d.effectiveRate)} · 세전 현금 대비\u003c/div>\u003cp class=\"footnote\">다른 숙소 소득을 합산한 세금 증가분입니다. 원천징수는 다시 차감하지 않습니다. 건보료·연금·세액공제는 제외하며 실제 입금일의 금액과 다를 수 있습니다.\u003c/p>\u003c/section>\n \u003csection class=\"pt-slide\" data-slide=\"3\">\u003cp class=\"page-label\">04 / BEFORE YOU DECIDE\u003c/p>\u003ch1>수익과 원금은\u003cbr>나눠서 확인하세요.\u003c/h1>\u003cul class=\"rule-list\">\u003cli>\u003cb>① 계약과 내 권리\u003c/b>손익 배분, 보증금 반환 대상, 지급 시기와 중도 해지 조건을 계약서로 확인합니다.\u003c/li>\u003cli>\u003cb>② 수익은 운영 가정입니다\u003c/b>가동률·객단가·비용이 바뀌면 수령액도 달라집니다. 손실이 발생할 수 있습니다.\u003c/li>\u003cli>\u003cb>③ 회수기간의 의미\u003c/b>총 투자금 ÷ 연 운영·투자 수입입니다. 보증금 반환·대여금 원금 상환을 더하지 않습니다.\u003c/li>\u003cli>\u003cb>④ 세금은 개인별로 다릅니다\u003c/b>계약·다른 소득·공제에 따라 달라집니다. 이 자료는 기존 계산기 모형의 추정치입니다.\u003c/li>\u003c/ul>\u003cdiv class=\"note\">${escapeHtml(d.source)}\u003cbr>작성: ${escapeHtml(d.created)} · 금액 단위: 만원\u003cbr>기존 계산기의 입력값 변경은 이 자료에 자동 반영되지 않습니다.\u003c/div>\u003cp class=\"footnote\">이 화면에는 선택한 사람의 결과만 표시합니다. 공유용 HTML에는 다른 사람의 명단·투자내역·원본 입력을 넣지 않습니다.\u003c/p>\u003c/section>`;\n goPage(0);\n}\nfunction goPage(n){activePage=Math.max(0,Math.min(3,n));document.querySelectorAll('[data-slide]').forEach(s=>s.hidden=Number(s.dataset.slide)!==activePage);document.querySelectorAll('[data-page]').forEach(b=>b.setAttribute('aria-current',Number(b.dataset.page)===activePage?'step':'false'));el('pageCount').textContent=(activePage+1)+' / 4';el('prev').disabled=activePage===0;el('next').disabled=activePage===3;window.scrollTo?.({top:0,behavior:'instant'});}\nfunction bindViewer(){document.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>goPage(Number(b.dataset.page)));el('prev').onclick=()=>goPage(activePage-1);el('next').onclick=()=>goPage(activePage+1);document.addEventListener('keydown',e=>{if(document.querySelector('dialog[open]')||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;if(e.key==='ArrowRight')goPage(activePage+1);if(e.key==='ArrowLeft')goPage(activePage-1);});}\n";const PT_SHELL="\u003c!doctype html>\u003chtml lang=\"ko\">\u003chead>\u003cmeta charset=\"utf-8\">\u003cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1, viewport-fit=cover\">\u003cmeta name=\"color-scheme\" content=\"light\">\u003cmeta name=\"theme-color\" content=\"#173f34\">\u003ctitle>BnB · 투자자 모바일 PT\u003c/title>\u003cstyle>__CSS__\u003c/style>\u003c/head>\u003cbody>\n\u003cheader class=\"topbar\">\u003cdiv class=\"brand\">BnB.\u003csmall>INVESTOR BRIEFING\u003c/small>\u003c/div>\u003cdiv class=\"controls\">\u003cbutton id=\"settings\" class=\"settings-only\">자료·공개 설정\u003c/button>\u003cbutton id=\"present\" class=\"settings-only\">PT 시작\u003c/button>\u003c/div>\u003c/header>\n\u003cmain class=\"wrap\">\u003cdiv id=\"identity\" class=\"identity\">\u003c/div>\u003cp id=\"notice\" role=\"status\" class=\"notice\" hidden>\u003c/p>\u003cdiv id=\"slides\">\u003c/div>\u003cdiv id=\"others\">\u003c/div>\u003cdiv class=\"next-row\">\u003cbutton id=\"prev\">← 이전\u003c/button>\u003cspan id=\"pageCount\" class=\"page-count\">1 / 4\u003c/span>\u003cbutton id=\"next\" class=\"primary\">다음 →\u003c/button>\u003c/div>\u003c/main>\n\u003cnav class=\"bottom\" aria-label=\"투자 브리핑\">\u003cdiv class=\"bottom-inner\">\u003cbutton data-page=\"0\">01 한눈에\u003c/button>\u003cbutton data-page=\"1\">02 숙소별\u003c/button>\u003cbutton data-page=\"2\">03 정산\u003c/button>\u003cbutton data-page=\"3\">04 확인사항\u003c/button>\u003c/div>\u003c/nav>\n__SETTINGS__\n\u003cscript>__SCRIPT__\u003c/script>\u003c/body>\u003c/html>\n";
+let ptBook=null,ptResult=null,selectedPerson='',dataSource='예시 시뮬레이션',isDemo=true,presenting=false;
+function msg(text){el('notice').textContent=text;el('notice').hidden=!text;}
+function createReport(result,personId,{demo=false,source='계산기 입력',created=new Date().toLocaleString('ko-KR',{timeZone:'Asia/Seoul'})}={}){
+ if(!result.valid)throw Error('계산 오류를 먼저 해결하세요.');
+ const p=result.people.find(x=>x.profile.id===personId);if(!p||!p.rows.length)throw Error('집계에 포함된 숙소의 참여자를 선택하세요.');
+ const returns=personSiteReturns(p,'all'),parts=incomeParts(p).map(x=>({label:x.label,pre:x.pre,tax:x.tax,post:x.post}));
+ const siteIds=[...new Set(p.rows.map(x=>x.siteId))];
+ const sites=siteIds.map(siteId=>{
+  const sr=result.sites.find(x=>x.site.id===siteId),rows=p.rows.filter(x=>x.siteId===siteId),ret=returns.rows.find(x=>x.siteId===siteId),personal=sr.state.people.find(x=>x.id===personId),landlord=rows.filter(x=>x.role==='landlord');
+  const pre=rows.reduce((a,x)=>a+x.cash,0),tax=rows.reduce((a,x)=>a+x.allocatedTax,0),rentalPre=landlord.reduce((a,x)=>a+x.cash,0),rentalTax=landlord.reduce((a,x)=>a+x.allocatedTax,0);
+  const capitalParts=[];
+  if(personal)for(const [key,label] of [['deposit','보증금'],['repair','수리비'],['working','운전자금'],['leasePremium','임대차 권리금'],['subleasePremium','전대차 권리금'],['loanPrincipal','대여 원금']]){if(personal[key]>0)capitalParts.push({label,value:personal[key]});}
+  const v=sr.result.vat;
+  // Explicit allowlist: never copy row.person, book profiles, site bindings, or unrelated sites.
+  return{name:sr.site.name,contract:modes[sr.state.contractMode]||'직접 설정',capital:rows.reduce((a,x)=>a+x.capital,0),pre,post:pre-tax,tax,postRoi:ret?.postRoi??null,capitalParts,occupancy:sr.state.occupancy,days:sr.state.days,adr:sr.state.channelMix?sr.state.channelMix.reduce((a,c)=>a+c.adr*c.share/100,0):sr.state.adr,adrBasis:(sr.state.priceBasis==='net'?'과세 단가 VAT 별도':'과세 단가 VAT 포함')+' · 채널 혼합 시 판매박수 가중 평균 · 추가요금 별도',vatLabel:v.housingOnly?'면세 매출':v.mode==='general'?'일반과세':v.exempt?'간이 · 납부의무 면제 추정':'간이과세',rentalPre,rentalPost:rentalPre-rentalTax};
+ });
+ return{version:1,name:p.profile.name,demo,source,created,capital:p.capital,pre:p.pre,post:p.post,tax:p.tax.total,national:p.tax.national,local:p.tax.local,effectiveRate:p.tax.rate,returnPre:p.returnPre,returnPost:p.returnPost,returnPreRoi:p.preRoi,returnPostRoi:p.postRoi,rentalPre:p.rentalPre,hasHost:p.rows.some(r=>['investorHost','externalHost'].includes(r.role)),separable:p.separable,investmentPreRoi:p.capital>0&&p.separable?p.investmentPre/p.capital*100:null,investmentPostRoi:p.capital>0&&p.separable?p.investmentPost/p.capital*100:null,parts,sites};
+}
+function pickReport(){return createReport(ptResult,selectedPerson,{demo:isDemo,source:dataSource});}
+function loadPortfolio(input,source,demo=false){
+ const candidate=clone(validateBook(input)),res=portfolio(candidate);
+ if(!res.valid)throw Error(res.errors.map(e=>e.name+': '+e.message).join('\n'));
+ if(!res.people.some(p=>p.rows.length))throw Error('집계에 포함된 숙소와 참여자가 없습니다.');
+ ptBook=candidate;ptResult=res;dataSource=source;isDemo=demo;
+ selectedPerson=(res.people.find(p=>p.profile.id===selectedPerson&&p.rows.length)||res.people.find(p=>p.capital>0&&p.rows.length&&!p.rows.some(r=>['investorHost','externalHost'].includes(r.role)))||res.people.find(p=>p.capital>0&&p.rows.length)||res.people.find(p=>p.rows.length)).profile.id;
+ el('hideOthers').checked=true;refreshSelect();el('dataStatus').textContent=source;displayReport(pickReport());renderOthers();msg('');
+}
+function refreshSelect(){el('person').innerHTML=ptResult.people.filter(p=>p.rows.length).map(p=>`<option value="${escapeHtml(p.profile.id)}" ${p.profile.id===selectedPerson?'selected':''}>${escapeHtml(p.profile.name)}</option>`).join('');}
+function renderOthers(){
+ el('others').innerHTML='';
+ if(el('hideOthers').checked||presenting)return;
+ const others=ptResult.people.filter(p=>p.profile.id!==selectedPerson&&p.rows.length);
+ el('others').innerHTML=`<section class="card other-card"><h3>발표자용 · 다른 참여자 내역</h3><p class="muted">공유용 HTML에는 포함하지 않습니다.</p>${others.map(p=>`<div class="flow-row"><span>${escapeHtml(p.profile.name)}<small>투자금 ${cash(p.capital)}</small></span><b>${cash(p.post/12)} / 월 세후</b></div>`).join('')}</section>`;
+}
+function safeJson(value){return JSON.stringify(value).replace(/</g,'\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');}
+function createShareHtml(report){
+ // This template contains only presentation code and this person's allowlisted results.
+ const script=PT_VIEWER+'\nbindViewer();displayReport('+safeJson(report)+');';
+ return PT_SHELL.replace('__CSS__',()=>PT_CSS).replace('__SETTINGS__','').replace('__SCRIPT__',()=>script).replace('<body>','<body class="export-only">');
+}
+function saveShare(){try{selectedPerson=el('person').value||selectedPerson;const report=pickReport();const blob=new Blob([createShareHtml(report)],{type:'text/html;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='BnB-투자자-개인요약.html';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);el('dataStatus').textContent='선택한 사람의 결과만 공유용 HTML로 저장했습니다.';}catch(e){el('dataStatus').textContent=e.message;}}
+function showSetup(){presenting=false;el('present').textContent='PT 시작';el('settings').hidden=false;el('hideOthers').checked=true;renderOthers();refreshSelect();el('setup').showModal();}
+function closeSetup(){selectedPerson=el('person').value;displayReport(pickReport());renderOthers();el('setup').close();el('person').innerHTML='';}
+function togglePresent(){
+ if(presenting){showSetup();return;}
+ presenting=true;el('hideOthers').checked=true;renderOthers();el('person').innerHTML='';el('setup').close();el('settings').hidden=true;el('present').textContent='PT 종료';goPage(0);
+}
+bindViewer();
+el('settings').onclick=showSetup;el('present').onclick=togglePresent;el('apply').onclick=()=>{try{closeSetup();}catch(e){el('dataStatus').textContent=e.message;}};
+el('share').onclick=saveShare;
+el('setup').addEventListener('cancel',()=>{el('person').innerHTML='';});
+el('loadLocal').onclick=()=>{try{const raw=localStorage.getItem('bnb-multi-site-portfolio-v1');if(!raw)throw Error('이 브라우저에 계산기 저장 자료가 없습니다. JSON 파일을 불러오세요.');loadPortfolio(JSON.parse(raw),'이 브라우저의 계산기 자료 · 읽은 시점 기준');}catch(e){el('dataStatus').textContent='불러오기 실패: '+e.message;}};
+el('importFile').onchange=async e=>{try{const f=e.target.files[0];if(!f)return;if(f.size>5e6)throw Error('5MB 이하 JSON 파일을 선택하세요.');loadPortfolio(JSON.parse(await f.text()),'불러온 계산기 JSON · 읽은 시점 기준');}catch(err){el('dataStatus').textContent='불러오기 실패: '+err.message;}e.target.value='';};
+el('demo').onclick=()=>loadPortfolio(exampleBook(),'예시 시뮬레이션 · 실제 투자 제안 아님',true);
+loadPortfolio(exampleBook(),'예시 시뮬레이션 · 실제 투자 제안 아님',true);
+// No automatic read/write of original calculator storage. Imported data stays in memory.
+el('person').innerHTML='';
+window.BnBInvestorPT={createReport,createShareHtml,loadPortfolio,getReport:()=>activeReport,getResult:()=>ptResult,exampleBook,goPage};
+</script></body></html>
